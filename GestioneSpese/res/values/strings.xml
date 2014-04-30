@@ -4,5 +4,9 @@
     <string name="app_name">GestioneSpese</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <color name="blue">#003399</color>
+    <string name="myApp">Gestione Spese</string>
+    <color name="white">#FFFFFF</color>
+    <string name="data">[Mese,GG]</string>
 
 </resources>
