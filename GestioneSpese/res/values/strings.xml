@@ -8,5 +8,19 @@
     <string name="myApp">Gestione Spese</string>
     <color name="white">#FFFFFF</color>
     <string name="data">[Mese,GG]</string>
-
+    <color name="spesa">#FF0000</color>
+    <color name="conto">#007FFF</color>
+    <color name="altro">#FFFF00</color>
+    <color name="entrata">#00FF00</color>
+    <color name="panoramica">#8F8F8F</color>
+    <color name="report">#8F00FF</color>
+    <color name="impostazioni">#404040</color>
+    <string name="spesa">Spesa</string>
+    <string name="conto">Conto</string>
+    <string name="impostazioni">Impostazioni</string>
+    <string name="entrata">Entrata</string>
+    <string name="panoramica">Panoramica</string>
+    <string name="report">Report</string>
+    <string name="altro">Altro</string>
+    <string name="Report1">Report1</string>
 </resources>
