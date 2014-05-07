@@ -17,6 +17,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="@string/myApp"
+        android:textSize="10pt"
         android:textColor="@color/white" />
     <TextView
         android:id="@+id/date"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:textSize="10pt"
         android:text="@string/data"
         android:textColor="@color/white" />
 
@@ -44,7 +46,9 @@
             android:layout_row="1"
             android:layout_rowSpan="2"
             android:background="@color/conto"
-            android:text="@string/conto" />
+            android:text="@string/conto" 
+            android:textColor="@color/white"/>
+        
 
         <Button
             android:id="@+id/altro"
@@ -53,7 +57,17 @@
             android:layout_column="0"
             android:layout_row="3"
             android:background="@color/altro"
-            android:text="@string/altro" />
+            android:text="@string/altro"
+            android:textColor="@color/white" />
+
+         <ImageView
+             android:id="@+id/altro_icon"
+             android:layout_column="0"
+             android:layout_gravity="center|top"
+             android:layout_row="3"
+             android:paddingTop="5dp"
+             android:src="@drawable/more_icon"
+             tools:ignore="ContentDescription" />
 
         <Button
             android:id="@+id/panoramica"
@@ -63,7 +77,18 @@
             android:layout_gravity="fill_horizontal"
             android:layout_row="1"
             android:background="@color/panoramica"
-            android:text="@string/panoramica" />
+            android:text="@string/panoramica"
+            android:textColor="@color/white" 
+            android:paddingTop="15dp"/>
+
+         <ImageView
+             android:id="@+id/panoramica_icon"
+             android:layout_column="1"
+             android:layout_gravity="center|top"
+             android:layout_row="1"
+             android:paddingTop="5dp"
+             android:src="@drawable/summary_icon"
+             tools:ignore="ContentDescription" />
 
         <Button
             android:id="@+id/report"
@@ -73,7 +98,18 @@
             android:layout_gravity="fill_horizontal"
             android:layout_row="2"
             android:background="@color/report"
-            android:text="@string/report" />
+            android:text="@string/report"
+            android:paddingTop="20dp"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/report_icon"
+            android:layout_column="1"
+            android:layout_gravity="center|top"
+            android:layout_row="2"
+            android:paddingTop="5dp"
+            android:src="@drawable/report_icon"
+            tools:ignore="ContentDescription" />
 
         <Button
             android:id="@+id/impostazioni"
@@ -83,7 +119,16 @@
             android:layout_gravity="fill_horizontal|top"
             android:layout_row="3"
             android:background="@color/impostazioni"
-            android:text="@string/impostazioni" />
+            android:text="@string/impostazioni"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/impostazioni_icon"
+            android:layout_column="1"
+            android:layout_gravity="center|top"
+            android:layout_row="3"
+            android:src="@drawable/settings_icon"
+            tools:ignore="ContentDescription" />
 
         <Button
             android:id="@+id/entrata"
@@ -94,7 +139,8 @@
             android:layout_marginTop="14dp"
             android:layout_row="0"
             android:background="@color/entrata"
-            android:text="@string/entrata" />
+            android:text="@string/entrata" 
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/spesa"
@@ -107,6 +153,51 @@
             android:drawablePadding="0dp"
             android:text="@string/spesa"
             android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/spesa_icon"
+            android:layout_column="0"
+            android:layout_gravity="right|center_vertical"
+            android:layout_row="0"
+            android:paddingRight="10dp"
+            android:src="@drawable/add_expense"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/entrata_icon"
+            android:layout_column="1"
+            android:layout_gravity="right|center_vertical"
+            android:layout_row="0"
+            android:paddingRight="10dp"
+            android:src="@drawable/add_income"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/conto_icon"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_row="1"
+            android:src="@drawable/account_icon"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/trasferimento_icon"
+            android:layout_column="0"
+            android:layout_gravity="right|center_vertical"
+            android:layout_row="2"
+            android:paddingRight="10dp"
+            android:src="@drawable/transfer"
+            tools:ignore="ContentDescription" />
+
+        <TextView 
+            android:id="@+id/saldo_conto"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_gravity="left|center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/Report1"
+            android:textColor="@color/white"
+            />
 
     </GridLayout>
 

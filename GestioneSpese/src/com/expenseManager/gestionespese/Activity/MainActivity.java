@@ -1,6 +1,11 @@
-package com.expenseManager.gestionespese;
+package com.expenseManager.gestionespese.Activity;
 
 import java.util.Calendar;
+
+import com.expenseManager.gestionespese.R;
+import com.expenseManager.gestionespese.R.id;
+import com.expenseManager.gestionespese.R.layout;
+import com.expenseManager.gestionespese.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
