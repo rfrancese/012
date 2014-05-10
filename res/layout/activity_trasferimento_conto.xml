@@ -1,0 +1,231 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@color/blue"
+    tools:context=".TrasferimentoConto" >
+
+    <LinearLayout 
+        android:id="@+id/intesta_trasferimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="@color/conto"
+        >
+        <TextView
+            android:textColor="@color/white"
+            android:text="@string/intest_trasconto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="8pt"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btn_addtrasferimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intesta_trasferimento"
+        android:paddingTop="0px" 
+        android:background="@color/conto1">
+
+        <Button
+            android:id="@+id/btn_annulla"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:background="@color/conto"
+            android:text="@string/annulla"
+            android:textColor="@color/white"
+             />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <Button
+            android:id="@+id/btn_salva"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/conto"
+            android:text="@string/salva"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/trasferimento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_addtrasferimento"
+        android:orientation="vertical"
+        >
+    <LinearLayout 
+        android:id="@+id/number_addtrasferimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        >
+        <TextView 
+            android:id="@+id/symeur_addtrasferimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/symeur"
+            android:paddingLeft="180dp"
+            android:textSize="8pt"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/cat_addtrasferimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        >
+
+    <TextView
+        android:id="@+id/labCat_addtrasferimento"
+        android:layout_width="99dp"
+        android:layout_height="match_parent"
+        android:text="@string/DA"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <TextView
+        android:id="@+id/cate_addtrasferimento"
+        android:layout_width="189dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="30dp"
+        android:text="@string/da_default"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingLeft="40dp"
+        android:src="@android:drawable/ic_menu_edit"
+        tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/ben_addtrasferimento"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingBottom="10dp" >
+
+   <TextView
+        android:id="@+id/labCat_addtrasferimento1"
+        android:layout_width="99dp"
+        android:layout_height="match_parent"
+        android:text="@string/A"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <TextView
+        android:id="@+id/cate_addtrasferimento1"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:text="@string/a_default"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingLeft="40dp"
+        android:src="@android:drawable/ic_menu_edit"
+        tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/data_addtrasferimento"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingBottom="10dp" >
+
+    <TextView
+        android:id="@+id/labData_addtrasferimento"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/data1"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <TextView
+        android:id="@+id/textData_addtrasferimento"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:text="@string/data"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <ImageButton
+        android:id="@+id/trasferimento_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingLeft="40dp"
+        android:src="@android:drawable/ic_menu_edit"
+        tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/note_addtrasferimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        >
+
+         <TextView
+             android:id="@+id/labNote_addtrasferimento"
+             android:layout_width="100dp"
+             android:layout_height="wrap_content"
+             android:text="@string/note"
+             android:textColor="@color/white"
+             android:textSize="8pt" />
+
+    <EditText
+        android:id="@+id/note"
+        android:layout_width="189dp"
+        android:layout_height="match_parent"
+        android:inputType="text"
+        android:paddingLeft="30dp"
+        android:text="@string/opt"
+        android:textColor="@color/white"
+        android:textSize="8pt" >
+     <requestFocus /></EditText>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingLeft="40dp"
+        android:src="@android:drawable/ic_menu_edit"
+        tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".Conto" >
+    
+    <TextView
+        android:id="@+id/intes_conto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/conto"
+        android:textSize="8pt"
+        android:background="@color/conto"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/saldo_conto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/conto"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:text="@string/Report1"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+   <Button
+       android:id="@+id/addConto"
+       android:layout_width="300dp"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginBottom="16dp"
+       android:background="@color/conto"
+       android:gravity="center"
+       android:text="@string/addConto"
+       android:textColor="@color/white"
+       android:textSize="8pt" />
+
+   <RelativeLayout
+       android:id="@+id/conti"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/intes_conto"
+       android:layout_marginTop="20dp"
+       android:background="@color/grey"
+       android:orientation="horizontal"
+       android:paddingBottom="5dp"
+       android:paddingLeft="5dp"
+       android:paddingRight="5dp"
+       android:paddingTop="10dp" >
+
+       <CheckBox
+           android:id="@+id/sel_conto"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:checked="true" />
+
+       <TextView
+           android:id="@+id/name_cont"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/sel_conto"
+           android:text="Nome Conto"
+           android:textColor="@color/black"
+           android:textSize="8pt" />
+
+       <TextView
+           android:id="@+id/saldo_cont"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/name_cont"
+           android:layout_below="@+id/name_cont"
+           android:text="Saldo iniziale €0.0"
+           android:textColor="@color/black"
+           android:textSize="6pt" />
+
+       <TextView
+           android:id="@+id/saldo_conto"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentTop="true"
+           android:layout_marginRight="37dp"
+           android:paddingBottom="5dp"
+           android:paddingRight="10dp"
+           android:paddingTop="5dp"
+           android:text="@string/Report1"
+           android:textColor="@color/black"
+           android:textSize="8pt" />
+
+       <ImageButton
+           android:id="@+id/opt_cont"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentTop="true"
+           android:background="@color/grey"
+           android:src="@drawable/account_option" />
+   </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GestioneSpese</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <color name="blue">#003399</color>
+
+    <string name="myApp">Gestione Spese</string>
+
+    <color name="white">#FFFFFF</color>
+
+    <string name="data">[Mese,GG]</string>
+
+    <color name="spesa">#FF0000</color>
+    <color name="conto">#007FFF</color>
+    <color name="altro">#FFD800</color>
+    <color name="entrata">#228b22</color>
+    <color name="entrata1">#6B8E23</color>
+    <color name="panoramica">#8F8F8F</color>
+    <color name="report">#8F00FF</color>
+    <color name="impostazioni">#404040</color>
+    <color name="spesa_1">#B22222</color>
+    <color name="grey">#B2B2B2</color>
+    <color name="black">#000000</color>
+    <color name="conto1">#ABCDEF</color>
+
+    <string name="spesa">Spesa</string>
+    <string name="DA">DA</string>
+    <string name="A">A</string>
+    <string name="a_default">Seleziona Conto</string>
+    <string name="da_default">Seleziona Conto</string>
+    <string name="intest_trasconto">Esegui Trasferimento</string>
+    <string name="nome">Nome</string>
+    <string name="tipo1">Tipo</string>
+    <string name="addConto">Aggiungi Conto</string>
+    <string name="conto">Conto</string>
+    <string name="impostazioni">Impostazioni</string>
+    <string name="entrata">Entrata</string>
+    <string name="panoramica">Panoramica</string>
+    <string name="report">Report</string>
+    <string name="altro">Altro</string>
+    <string name="Report1">€0,0</string>
+    <string name="title_activity_spesa">Spesa</string>
+    <string name="spesa1">Spesa</string>
+    <string name="title_activity_aggiungi_spesa">AggiungiSpesa</string>
+    <string name="annulla">Annulla</string>
+    <string name="salva">Salva</string>
+    <string name="symeur">€</string>
+    <string name="grafo">Grafico</string>
+    <string name="bilancio">Partita Doppia</string>
+    <string name="stampa">Stampa Report</string>
+    <string name="categoria">Categoria</string>
+    <string name="cat_default">Seleziona Categoria</string>
+    <string name="creditore">Descrizione</string>
+    <string name="selezione">Selezione</string>
+    <string name="entrambe">Entrambe</string>
+    <string name="uscita">Uscita</string>
+    <string name="filtri">Filtra</string>
+    <string name="periodo">Seleziona Periodo</string>
+    <string name="tipo">Tipo Report</string>
+    <string name="data1">Data</string>
+    <string name="sel_conto">Paga da</string>
+    <string name="sel_conto_default">Seleziona conto</string>
+    <string name="note">Nota</string>
+    <string name="opt">Opzionale</string>
+    <string name="luogo">Luogo</string>
+    <string name="luogo1">Inserisci luogo spesa</string>
+    <string name="intest_addspesa">Aggiungi Spesa</string>
+    <string name="intest_addentrata">Aggiungi Entrata</string>
+    <string name="title_activity_entrata">Entrata</string>
+    <string name="title_activity_aggiungi_entrata">AggiungiEntrata</string>
+    <string name="debitore">Descrizione</string>
+    <string name="title_activity_panoramica">Panoramica</string>
+    <string name="title_activity_report">Report</string>
+    <string name="ordina1">Ordina</string>
+    <string name="title">Titolo</string>
+    <string name="desc">Descrizione</string>
+
+    <string-array name="ordina">
+        <item>Ordina</item>
+        <item>Ordine Decrescente</item>
+        <item>Ordine Crescente</item>
+    </string-array>
+    <string-array name="conto">
+        <item>Seleziona Conto</item>
+        <item> new conto</item>
+    </string-array>
+
+    <string name="title_activity_conto">Conto</string>
+    <string name="title_activity_aggiungi_conto">AggiungiConto</string>
+    <string name="title_activity_trasferimento_conto">TrasferimentoConto</string>
+
+</resources>
