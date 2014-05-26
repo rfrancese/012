@@ -2,15 +2,19 @@ package com.expenseManager.gestionespese.Activity;
 
 import java.util.Calendar;
 
+import com.expenseManager.gestionespese.Altro;
+import com.expenseManager.gestionespese.Categoria;
 import com.expenseManager.gestionespese.R;
 import com.expenseManager.gestionespese.R.id;
 import com.expenseManager.gestionespese.R.layout;
 import com.expenseManager.gestionespese.R.menu;
 import com.expenseManager.gestionespese.Utility.Calendario;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +27,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		Log.v("Stringa",""+GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext()));
 		//Setta la data
 		Calendar data=Calendar.getInstance();
 		TextView var=(TextView) this.findViewById(R.id.date);
@@ -103,8 +108,19 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent trasferimento=new Intent(MainActivity.this,TrasferimentoConto.class);
+				Intent trasferimento=new Intent(MainActivity.this,AggiungiConto.class);
 				startActivity(trasferimento);	
+			}
+		});
+		
+		Button altro=(Button)findViewById(R.id.altro);
+		altro.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			Intent altro=new Intent(MainActivity.this,Altro.class);
+			startActivity(altro);
 			}
 		});
 	}

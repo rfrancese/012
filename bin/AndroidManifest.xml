@@ -4,8 +4,24 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="com.expenseManager.gestionspese.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.expenseManager.gestionespese.permission.MAPS_RECEIVE" />
+
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="16"
         android:targetSdkVersion="18" />
 
     <application
@@ -13,6 +29,10 @@
         android:icon="@drawable/gestionespese"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name="com.expenseManager.gestionespese.Activity.MainActivity"
             android:label="@string/app_name" >
@@ -57,6 +77,27 @@
         <activity
             android:name="com.expenseManager.gestionespese.Activity.TrasferimentoConto"
             android:label="@string/title_activity_trasferimento_conto" >
+        </activity>
+        <activity
+            android:name="com.expenseManager.gestionespese.Activity.CategoriaEntrata"
+            android:label="@string/title_activity_categoria_entrata" >
+        </activity>
+        <activity
+            android:name="com.expenseManager.gestionespese.Activity.Mappe"
+            android:label="@string/title_activity_mappe" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAuoqZ5uoZJdzjMT7FUENgQRYqhQhhI0aM" />
+
+        <activity
+            android:name="com.expenseManager.gestionespese.Altro"
+            android:label="@string/title_activity_altro" >
+        </activity>
+        <activity
+            android:name="com.expenseManager.gestionespese.Categoria"
+            android:label="@string/title_activity_categoria" >
         </activity>
     </application>
 

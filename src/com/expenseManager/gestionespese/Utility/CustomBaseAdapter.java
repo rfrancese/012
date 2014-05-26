@@ -1,9 +1,11 @@
 package com.expenseManager.gestionespese.Utility;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.expenseManager.gestionespese.R;
 
+import Account.Conto;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -17,12 +19,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class CustomBaseAdapter extends ArrayAdapter<String> {
+public class CustomBaseAdapter extends ArrayAdapter<Conto> {
 
-	String[] values;
+	ArrayList<Conto> values;
 	
 	
-	public CustomBaseAdapter(Context ctx, int txtViewResourceId, String[] objects,String[] value) {
+	public CustomBaseAdapter(Context ctx, int txtViewResourceId, ArrayList<Conto> objects,ArrayList<Conto> value) {
 		super(ctx, txtViewResourceId, objects);
 		values=value;
 	}
@@ -36,7 +38,7 @@ public class CustomBaseAdapter extends ArrayAdapter<String> {
 		
 		TextView subSpinner = (TextView) mySpinner
 				.findViewById(R.id.text);
-		subSpinner.setText(values[position]);
+		subSpinner.setText(values.get(position).getNome());
 
 		ImageView left_icon = (ImageView) mySpinner
 				.findViewById(R.id.icon);
@@ -52,7 +54,7 @@ public class CustomBaseAdapter extends ArrayAdapter<String> {
 		
 		TextView subSpinner = (TextView) mySpinner
 				.findViewById(R.id.text);
-		subSpinner.setText(values[pos]);
+		subSpinner.setText(values.get(pos).getNome());
 
 		ImageView left_icon = (ImageView) mySpinner
 				.findViewById(R.id.icon);
@@ -68,7 +70,7 @@ public class CustomBaseAdapter extends ArrayAdapter<String> {
 		
 		final TextView subSpinner = (TextView) mySpinner
 				.findViewById(R.id.text);
-		subSpinner.setText(values[position]);
+		subSpinner.setText(values.get(position).getNome());
 
 		ImageView left_icon = (ImageView) mySpinner
 				.findViewById(R.id.icon);

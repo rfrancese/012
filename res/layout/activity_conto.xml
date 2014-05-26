@@ -8,7 +8,6 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     tools:context=".Conto" >
-    
     <TextView
         android:id="@+id/intes_conto"
         android:layout_width="match_parent"
@@ -47,12 +46,22 @@
        android:textColor="@color/white"
        android:textSize="8pt" />
 
-   <RelativeLayout
+   <ScrollView
        android:id="@+id/conti"
+       android:layout_width="match_parent"
+       android:layout_height="380dp"
+       android:layout_below="@+id/intes_conto" >
+
+   <RelativeLayout
+       android:id="@+id/conti2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" >
+  
+   <RelativeLayout
+       android:id="@+id/conti12"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_alignParentLeft="true"
-       android:layout_below="@+id/intes_conto"
        android:layout_marginTop="20dp"
        android:background="@color/grey"
        android:orientation="horizontal"
@@ -61,11 +70,11 @@
        android:paddingRight="5dp"
        android:paddingTop="10dp" >
 
-       <CheckBox
+       <ImageView
            android:id="@+id/sel_conto"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:checked="true" />
+           android:src="@drawable/icon_bank" />
 
        <TextView
            android:id="@+id/name_cont"
@@ -87,7 +96,7 @@
            android:textSize="6pt" />
 
        <TextView
-           android:id="@+id/saldo_conto"
+           android:id="@+id/saldo_conto1"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_alignParentRight="true"
@@ -109,5 +118,6 @@
            android:background="@color/grey"
            android:src="@drawable/account_option" />
    </RelativeLayout>
-
+   </RelativeLayout>
+   </ScrollView>
 </RelativeLayout>

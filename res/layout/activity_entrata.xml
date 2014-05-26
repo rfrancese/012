@@ -48,7 +48,7 @@
     android:layout_alignParentLeft="true"
     android:paddingLeft="5dp"
     android:layout_below="@+id/linearLayout2"
-    android:text="Non ci sono recod da visualizzare..."
+    android:text="Non ci sono record da visualizzare..."
     android:textColor="@color/white" />
 
 <LinearLayout

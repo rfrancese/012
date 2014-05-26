@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@drawable/popup_bg"
+    tools:context="com.expenseManager.gestionespese.Categoria$PlaceholderFragment" >
+
+    <TextView
+        android:id="@+id/intesta_cate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista Categorie"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/popup"
+        android:textColor="@color/white"
+        android:textSize="8pt"
+         />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intesta_cate"
+        android:paddingTop="10dp"
+        >
+    <RelativeLayout android:id="@+id/Categorie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </RelativeLayout>
+    </ScrollView>
+    </RelativeLayout>

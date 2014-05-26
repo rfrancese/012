@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+    
+    <LinearLayout
+        android:id="@+id/spese" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <ImageView
+        android:layout_width="62dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/add_expense" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/spesa"
+        android:textSize="11pt"
+        />    
+    </LinearLayout>
+     <LinearLayout
+        android:id="@+id/entrate" 
+        android:layout_below="@+id/spese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <ImageView
+        android:layout_width="62dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/add_income" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="11pt"
+        android:text="@string/entrata"
+        />    
+    </LinearLayout>
+     <LinearLayout
+        android:id="@+id/conto" 
+        android:layout_below="@+id/entrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/account_icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="11pt"
+        android:text="@string/conto"
+        />    
+    </LinearLayout>
+     <LinearLayout
+        android:id="@+id/report" 
+        android:layout_below="@+id/conto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <ImageView
+        android:layout_width="62dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/report_icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="11pt"
+        android:text="@string/report"
+        />    
+    </LinearLayout>
+</RelativeLayout>

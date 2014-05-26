@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ordina">
+        <item>Ordina</item>
+        <item>Ordine Decrescente</item>
+        <item>Ordine Crescente</item>
+    </string-array>
+    <string-array name="conto">
+        <item>Seleziona Conto</item>
+        <item> new conto</item>
+    </string-array> 
+    <string-array name="nav_drawer_items">
+            <item>Home</item>
+            <item>Gestione Spesa</item>
+            <item>Gestione Entrata</item>
+            <item>Gestione Conto</item>
+            <item>Panoramica</item>
+            <item>Report</item>
+            <item>Altro</item>
+            <item>Impostazioni</item>
+        </string-array>
+
+        <!-- Nav Drawer List Item Icons -->
+        <!-- Keep them in order as the titles are in -->
+        <array name="nav_drawer_icons">
+            <item>@drawable/caticon2</item>
+            <item>@drawable/caticon15</item>
+            <item>@drawable/caticon53</item>
+            <item>@drawable/icon_bank</item>
+            <item>@drawable/partita_doppia</item>
+            <item>@drawable/caticon21</item>
+            <item>@drawable/caticon33</item>
+            <item>@drawable/caticon23</item>
+        </array>
+</resources>

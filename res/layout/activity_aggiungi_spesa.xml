@@ -108,8 +108,8 @@
         android:textSize="8pt" />
 
     <TextView
-        android:id="@+id/cate_addspesa"
-        android:layout_width="wrap_content"
+        android:id="@+id/cate_addspesa1"
+        android:layout_width="200dp"
         android:layout_height="match_parent"
         android:paddingLeft="30dp"
         android:text="@string/cat_default"
@@ -117,11 +117,12 @@
         android:textSize="8pt" />
 
     <ImageButton
+        android:id="@+id/sel_btncat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/blue"
         android:src="@android:drawable/ic_menu_edit"
-        android:paddingLeft="40dp" android:contentDescription="TODO"/>
+        android:paddingLeft="35dp" android:contentDescription="TODO"/>
 
     </LinearLayout>
 
@@ -192,37 +193,43 @@
      <LinearLayout
          android:id="@+id/selConto_addspesa"
          android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_height="50dp"
          android:paddingBottom="10dp" >
 
     <TextView
         android:id="@+id/labSelConto_addspesa"
         android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center|left"
         android:text="@string/sel_conto"
         android:textColor="@color/white"
         android:textSize="8pt" />
 
     <TextView
-        android:layout_width="189dp"
+        android:id="@+id/sel_txtconti"
+        android:layout_width="200dp"
         android:layout_height="match_parent"
         android:textColor="@color/white"
+        android:gravity="center"
+        
         android:textSize="8pt"
-        android:paddingLeft="30dp"
+        
         android:text="@string/sel_conto_default" />
 
     <ImageButton
+        android:id="@+id/sel_conti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/ic_menu_edit"
         android:background="@color/blue" 
-        android:paddingLeft="40dp"  />
+        android:layout_gravity="center"
+        android:paddingLeft="25dp"  />
 
     </LinearLayout>
     <LinearLayout
         android:id="@+id/note_addspesa"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:paddingBottom="10dp"
         >
@@ -237,25 +244,18 @@
 
     <EditText
         android:id="@+id/note1"
-        android:layout_width="189dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/white"
         android:textSize="8pt"
         android:paddingLeft="30dp"
         android:text="@string/opt" android:inputType="text"><requestFocus /></EditText>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_edit"
-        android:background="@color/blue" 
-        android:paddingLeft="40dp"  />
     </LinearLayout>
 
         <LinearLayout
             android:id="@+id/luogo_addspesa"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
             android:paddingBottom="10dp" >
 
@@ -276,10 +276,11 @@
                 android:textSize="8pt" />
 
             <ImageButton
+                android:id="@+id/getPosizione"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/blue"
-                android:paddingLeft="40dp"
+                android:paddingLeft="35dp"
                 android:src="@android:drawable/ic_menu_edit" />
         </LinearLayout>
 

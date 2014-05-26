@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+<TextView
+    android:id="@+id/nome_cat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Nome categoria:"
+    android:textColor="@color/white"
+    android:textSize="8pt" />
+
+<EditText
+    android:id="@+id/edit_nome_cat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:textColor="@color/white"
+    android:textSize="8pt"
+    android:inputType="text"
+    >
+    <requestFocus  />
+    </EditText>
+<Button 
+    android:id="@+id/conferma"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/white"
+    android:text="Ok"/>
+</LinearLayout>

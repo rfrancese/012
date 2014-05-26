@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/listAltro"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@color/blue" >
+        
+        <TextView
+        android:id="@+id/section_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/altro"
+        android:textSize="11pt"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        android:text="@string/altro"
+         />
+        <Button android:id="@+id/btn_addCaten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/section_label"
+            android:text="@string/intest_addcaten" />
+        <Button android:id="@+id/btn_addMappa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Gestione Mappa" 
+            android:layout_below="@+id/btn_addCaten"
+            />
+         
+        
+    </RelativeLayout>

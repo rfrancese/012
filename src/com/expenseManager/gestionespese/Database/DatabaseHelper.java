@@ -18,10 +18,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * Statment SQL per la creazione delle tabelle 
      */
 	
-	private static final String Tab_Entrata="create table op_entrata(_id primary key,importo float, data text not null, descrizione text, categoria integer, conto integer,note text, foreign key(categoria) references categoria(_id), foreign key(conto) references conto(_id)) ";
-	private static final String Tab_Uscita="create table op_uscita(_id primary key,importo float, data text not null, descrizione text, categoria integer, conto integer,note text,luogo text, foreign key(categoria) references categoria(_id), foreign key(conto) references conto(_id)) ";
-	private static final String Tab_Cat="create table categoria(_id primary key,nome text,color_id integer,icon_id integer)";
-	private static final String Tab_Conto="create table conto(_id primary key,importo float,nome text,tipo text)";
+	private static final String Tab_Entrata="create table op_entrata(_id integer primary key ,importo float, data text not null, descrizione text, categoria integer, conto integer,note text, foreign key(categoria) references categoria_en(_id), foreign key(conto) references conto(_id)) ";
+	private static final String Tab_Uscita="create table op_uscita(_id integer primary key ,importo float, data text not null, descrizione text, categoria integer, conto integer,note text,lat float,lon float, foreign key(categoria) references categoria_us(_id), foreign key(conto) references conto(_id)) ";
+	private static final String Tab_Cat_En="create table categoria_en(_id integer primary key ,nome text,color_id integer,icon_id integer)";
+	private static final String Tab_Cat_Us="create table categoria_us(_id integer primary key ,nome text,color_id integer,icon_id integer)";
+	private static final String Tab_Conto="create table conto(_id integer primary key,importo_init float,importo_att float,nome text,tipo text)";
 	
 	/**
 	 * 
@@ -36,9 +37,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
      db.execSQL(Tab_Entrata);
-     db.execSQL(Tab_Uscita);
+     //db.execSQL(Tab_Uscita);
      db.execSQL(Tab_Conto);
-     db.execSQL(Tab_Cat);
+     db.execSQL(Tab_Cat_En);
+     db.execSQL(Tab_Cat_Us);
 	}
 
 	@Override

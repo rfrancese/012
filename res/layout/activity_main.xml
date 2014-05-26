@@ -92,14 +92,14 @@
 
         <Button
             android:id="@+id/report"
-            android:layout_width="176dp"
+            android:layout_width="wrap_content"
             android:layout_height="104dp"
             android:layout_column="1"
             android:layout_gravity="fill_horizontal"
             android:layout_row="2"
             android:background="@color/report"
-            android:text="@string/report"
             android:paddingTop="20dp"
+            android:text="@string/report"
             android:textColor="@color/white" />
 
         <ImageView
@@ -113,7 +113,7 @@
 
         <Button
             android:id="@+id/impostazioni"
-            android:layout_width="176dp"
+            android:layout_width="wrap_content"
             android:layout_height="122dp"
             android:layout_column="1"
             android:layout_gravity="fill_horizontal|top"
@@ -132,15 +132,15 @@
 
         <Button
             android:id="@+id/entrata"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="118dp"
             android:layout_column="1"
             android:layout_gravity="fill_horizontal"
             android:layout_marginTop="14dp"
             android:layout_row="0"
             android:background="@color/entrata"
-            android:text="@string/entrata" 
-            android:textColor="@color/white"/>
+            android:text="@string/entrata"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/spesa"

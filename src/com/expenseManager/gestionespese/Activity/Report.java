@@ -5,15 +5,18 @@ import java.util.Calendar;
 import java.util.List;
 
 import com.expenseManager.gestionespese.R;
+import com.expenseManager.gestionespese.Database.DbAdapter;
 import com.expenseManager.gestionespese.R.layout;
 import com.expenseManager.gestionespese.R.menu;
 import com.expenseManager.gestionespese.Utility.Calendario;
 import com.expenseManager.gestionespese.Utility.CustomBaseAdapter;
+import com.expenseManager.gestionespese.Utility.layoutConto;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -29,14 +32,42 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Report extends Activity {
+	
+	 private DbAdapter dbHelper; 
+	 private Cursor cursor;
+	 private double value;
+	 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_report);
 		final Spinner categoria=(Spinner)findViewById(R.id.spinner_categoria);
+		
+		/**
+		 * Seleziona conto da passare all'adattatore
+		 */
+		
+		ArrayList<Account.Conto> conti=new ArrayList<Account.Conto>();
+		dbHelper = new DbAdapter(this);
+        dbHelper.open();
+        cursor=dbHelper.fetchAllCont();
+        startManagingCursor(cursor);
+        while(cursor.moveToNext())
+        {
+        	int id=Integer.parseInt(cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_CONTOID)));
+        	String nome=cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_CONTONOM));
+        	String tipo=cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_CONTOTIP));
+        	float importo=Float.parseFloat(cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_CONTOIM)));
+        	float importo_att=Float.parseFloat(cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_CONTOIM_AT)));
+        	conti.add(new Account.Conto(id,nome,tipo,importo,importo_att));
+        }
+        stopManagingCursor(cursor);
+        cursor.close();
+        
+		
 		//categoria.inflate(this, R.id.categorized, categoria);
-		CustomBaseAdapter adapter=new CustomBaseAdapter(this,R.layout.list_item,getResources().getStringArray(R.array.conto),getResources().getStringArray(R.array.conto));
+		CustomBaseAdapter adapter=new CustomBaseAdapter(this,R.layout.list_item,conti,conti);
 		categoria.setAdapter(adapter);
 		categoria.setOnItemSelectedListener(new OnItemSelectedListener(){
 
@@ -64,6 +95,9 @@ public class Report extends Activity {
 		}});*/
 		final Button dataDA=(Button)findViewById(R.id.sel_dataDA);
 		final Button dataA=(Button)findViewById(R.id.sel_dataA);
+		Calendar cal=Calendar.getInstance();
+		Calendario calendario=new Calendario(dataDA,cal.get(Calendar.MONTH),cal.get(Calendar.YEAR),cal.get(Calendar.DAY_OF_MONTH));
+		Calendario calendario2=new Calendario(dataA,cal.get(Calendar.MONTH),cal.get(Calendar.YEAR),cal.get(Calendar.DAY_OF_MONTH));
 		dataDA.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
