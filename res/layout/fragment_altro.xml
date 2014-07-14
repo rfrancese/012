@@ -4,7 +4,13 @@
      android:layout_width="match_parent"
      android:layout_height="match_parent"
      android:background="@color/blue" >
-        
+ <ScrollView 
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     >   
         <TextView
         android:id="@+id/section_label"
         android:layout_width="match_parent"
@@ -23,7 +29,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/section_label"
+            android:layout_below="@+id/btn_addMappa"
+            android:drawableLeft="@drawable/labelentrata"
             android:text="@string/intest_addcaten" />
         <Button android:id="@+id/btn_addMappa"
             android:layout_width="match_parent"
@@ -32,9 +39,45 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:text="Gestione Mappa" 
-            android:layout_below="@+id/btn_addCaten"
+            android:text="Visualizza le spese sulla mappa" 
+            android:drawableLeft="@drawable/map"
+            android:layout_below="@+id/section_label"
             />
-         
+
+        <Button
+            android:id="@+id/btn_addCatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_addCaten"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey"
+            android:drawableLeft="@drawable/labelspesa"
+            android:text="@string/intest_addcatus" />
         
+		<Button
+            android:id="@+id/btn_Catus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_addCatus"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey"
+            android:drawableLeft="@drawable/listaspese"
+            android:text="Gestione Categorie di Spesa" />
+        <Button
+            android:id="@+id/btn_Caten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_Catus"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey"
+            android:drawableLeft="@drawable/listaentrate"
+            android:text="Gestione Categorie di Entrata" />
+        </RelativeLayout>  
+        </ScrollView>
     </RelativeLayout>

@@ -1,5 +1,7 @@
 package Account;
 
+import android.util.Log;
+
 public class Entrata {
 
 	public int _id,categoria_id,conto_id;
@@ -31,6 +33,23 @@ public class Entrata {
 		return data;
 	}
 	
+	public int getDay()
+	{
+		int day=Integer.parseInt(data.substring(8));
+		return day;
+	}
+	
+	public int getMonth()
+	{
+		int month=Integer.parseInt(data.substring(5,7))-1;
+		return month;
+	}
+	public int getYear()
+	{
+		int year=Integer.parseInt(data.substring(0,4));
+		return year;
+	}
+	
 	public String getDescrizione()
 	{
 		return descrizione;
@@ -44,6 +63,11 @@ public class Entrata {
 	public int getCategoria()
 	{
 		return categoria_id;
+	}
+	
+	public String toString()
+	{
+		return "[ id = "+_id+" ][ data = "+data+" ][ importo = "+importo+" ]";
 	}
 	
 }

@@ -20,7 +20,7 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:textSize="8pt" />
-
+   
     <TextView
         android:id="@+id/layo_select"
         android:layout_width="match_parent"
@@ -68,9 +68,21 @@
             android:text="@string/entrambe"
             android:textColor="@color/white" />
     </LinearLayout>
+     <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_select"
+        >
+    <RelativeLayout 
+        android:id="@+id/contieni_tutto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        >
     <TextView
         android:id="@+id/sel_categoria"
-        android:layout_below="@+id/linear_select"
+        
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -110,6 +122,7 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:textSize="8pt" />
+     
      <LinearLayout
          android:id="@+id/sel_data"
          android:layout_below="@+id/sel_periodo"
@@ -118,25 +131,21 @@
          android:layout_alignParentLeft="true"
          android:layout_alignParentRight="true"
          android:orientation="horizontal" >
-        <Button
+        <Spinner
             android:id="@+id/sel_dataDA"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="@string/data"
+            android:prompt="@string/periodo"
+            
+            android:entries="@array/report"
             android:textColor="@color/white" />
-        <TextView 
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="-"
-             android:textSize="8pt"
-             android:textColor="@color/white"
-            />
+       
 
         <Button
             android:id="@+id/sel_dataA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
             android:layout_weight="0.5"
             android:text="@string/data"
             android:textColor="@color/white" /> 
@@ -162,17 +171,22 @@
          android:layout_height="wrap_content"
          android:orientation="vertical"
          >
-         <Button
+        <RadioGroup
+            android:id="@+id/seleRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+         <RadioButton
             android:id="@+id/sel_grafico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:text="@string/grafo"
             android:textColor="@color/white"
+            android:checked="true"
             android:drawableLeft="@drawable/grafico"
              />
 
-        <Button
+        <RadioButton
             android:id="@+id/sel_bilancio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -181,6 +195,7 @@
             android:textColor="@color/white"
             android:drawableLeft="@drawable/partita_doppia"
              /> 
+        </RadioGroup>
         <Button
             android:id="@+id/stampa"
             android:layout_width="match_parent"
@@ -191,4 +206,6 @@
             android:drawableLeft="@drawable/stampa"
             />
      </LinearLayout>
+     </RelativeLayout>
+     </ScrollView>
 </RelativeLayout>

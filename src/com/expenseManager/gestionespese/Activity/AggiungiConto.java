@@ -3,6 +3,7 @@ package com.expenseManager.gestionespese.Activity;
 import com.expenseManager.gestionespese.R;
 import com.expenseManager.gestionespese.R.layout;
 import com.expenseManager.gestionespese.R.menu;
+import com.expenseManager.gestionespese.Utility.SelezioneReport;
 import com.expenseManager.gestionespese.Database.DbAdapter;
 
 import android.os.Bundle;
@@ -25,11 +26,13 @@ public class AggiungiConto extends Activity {
 
 	 private DbAdapter dbHelper; 
 	 private Cursor cursor;
+	 private Account.Conto getconto=null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_aggiungi_conto);
+		getconto=(Account.Conto)getIntent().getSerializableExtra("conto");
 		dbHelper = new DbAdapter(this);
         dbHelper.open();
         
@@ -38,6 +41,8 @@ public class AggiungiConto extends Activity {
          */
         
         Button inserisci=(Button)findViewById(R.id.btn_salva);
+        if(getconto==null)
+        {
         inserisci.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -59,6 +64,38 @@ public class AggiungiConto extends Activity {
 				;
 			}
 		});
+        }
+        else
+        {
+        	TextView nome=(TextView)findViewById(R.id.edit_nome);
+			TextView tipo=(TextView)findViewById(R.id.edit_tipo);
+			EditText importo=(EditText)findViewById(R.id.edit_value);
+			
+			nome.setText(getconto.getNome());
+			tipo.setText(getconto.getTipo());
+			importo.setText(""+getconto.getImporto());
+        	inserisci.setOnClickListener(new View.OnClickListener() {
+    			
+    			@Override
+    			public void onClick(View v) {
+    				// TODO Auto-generated method stub
+    				TextView nome=(TextView)findViewById(R.id.edit_nome);
+    				TextView tipo=(TextView)findViewById(R.id.edit_tipo);
+    				EditText importo=(EditText)findViewById(R.id.edit_value);
+    				if(checkedValue(nome,tipo,importo,AggiungiConto.this)==true)
+    				{
+    				if(dbHelper.updateConto(getconto.getId(),nome.getText().toString(), tipo.getText().toString(),Float.parseFloat(importo.getText().toString()),Float.parseFloat(importo.getText().toString()))==-1)
+    					Toast.makeText(AggiungiConto.this, "Errore", Toast.LENGTH_SHORT).show();
+    				else
+    					Toast.makeText(AggiungiConto.this, "Conto Modificato", Toast.LENGTH_SHORT).show();
+    				Intent myintent=new Intent(AggiungiConto.this,Conto.class);
+    				startActivity(myintent);
+    				}
+    				else
+    				;
+    			}
+    		});	
+        }
         Button annulla=(Button)findViewById(R.id.btn_annulla);
         annulla.setOnClickListener(new View.OnClickListener() {
 			

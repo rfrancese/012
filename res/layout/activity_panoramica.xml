@@ -26,9 +26,15 @@
         android:paddingBottom="5dp"
         />    
     </LinearLayout>
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_panoramica"
+        >
     <RelativeLayout
         android:id="@+id/panoramica_l"
-        android:layout_below="@+id/layout_panoramica"
+        android:layout_below="@+id/scroll"
         android:padding="5dp"
         android:paddingBottom="10dp"
         android:layout_width="match_parent"
@@ -187,7 +193,7 @@
            android:layout_height="wrap_content"
            android:layout_alignBaseline="@+id/txtMspe"
            android:layout_alignBottom="@+id/txtMspe"
-           android:layout_alignLeft="@+id/txtV_M_red"
+           android:layout_alignParentRight="true"
            android:text="€0,0"
            android:textColor="@color/spesa"
            android:textSize="6pt" />
@@ -240,11 +246,12 @@
            android:layout_height="wrap_content"
            android:layout_alignBaseline="@+id/txtAspe"
            android:layout_alignBottom="@+id/txtAspe"
-           android:layout_alignLeft="@+id/txtV_A_red"
+           android:layout_alignParentRight="true"
            android:text="€0,0"
            android:textColor="@color/spesa"
            android:textSize="6pt" />
 
      </RelativeLayout>
     </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

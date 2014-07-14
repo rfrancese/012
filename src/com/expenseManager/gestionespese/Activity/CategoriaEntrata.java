@@ -7,20 +7,27 @@ import java.util.List;
 import com.expenseManager.gestionespese.R;
 import com.expenseManager.gestionespese.R.layout;
 import com.expenseManager.gestionespese.R.menu;
+import com.expenseManager.gestionespese.Database.DbAdapter;
 import com.expenseManager.gestionespese.Utility.ExpandableListAdapter;
+import com.expenseManager.gestionespese.Utility.color_id;
 
+import Account.Categoria;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
@@ -44,8 +51,23 @@ public class CategoriaEntrata extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_categoria_entrata);
+		DbAdapter dbHelper=new DbAdapter(this);
+		dbHelper.open();
+		Cursor cursor=dbHelper.fetchAllCatEn();
+		int i=0;
+		while(cursor.moveToNext())
+		{
+			Log.v("Categoria",cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_CATID)));
+			i++;
+		}
+		cursor.close();
+		Log.v("I",""+i);
+		DisplayMetrics P = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(P);
+		Log.v("P.x - P.Y",""+P.widthPixels+" - "+P.heightPixels);
 		int p=0,id;
-		
+		final Categoria categoria=new Categoria();
+		final color_id color_id=new color_id();
 		final RelativeLayout tab_cat=(RelativeLayout)findViewById(R.id.tab_entrata);
 		final ExpandableListView list=(ExpandableListView)findViewById(R.id.listStep);
 		final ArrayList<String> listDataHeader=new ArrayList<String>();
@@ -75,7 +97,7 @@ public class CategoriaEntrata extends Activity {
 		listChildImage.put(listDataHeader.get(0), img);
 		TextView textview=(TextView)findViewById(R.id.cattext);
 		ImageView setIcon=(ImageView)findViewById(R.id.seticon);
-		ExpandableListAdapter listAdapt=new ExpandableListAdapter(this,listDataHeader,listChildImage,nome_cat,color,textview,setIcon,list);
+		ExpandableListAdapter listAdapt=new ExpandableListAdapter(this,listDataHeader,listChildImage,nome_cat,color,textview,setIcon,list,categoria);
 		//prepareListData();
 		list.setAdapter(listAdapt);
 		list.setOnChildClickListener(new OnChildClickListener() {
@@ -96,6 +118,10 @@ public class CategoriaEntrata extends Activity {
 					seticon.setBackgroundColor(Integer.parseInt(color.get(
                             listDataHeader.get(groupPosition)).get(
                             childPosition).toString()));
+					color_id.setId(Integer.parseInt(color.get(
+                            listDataHeader.get(groupPosition)).get(
+                            childPosition).toString()));
+					categoria.setColor(color_id.getId());
 					Log.v("Color id",""+Integer.parseInt(color.get(listDataHeader.get(groupPosition)).get(childPosition).toString()));
 				}
 				
@@ -122,7 +148,30 @@ public class CategoriaEntrata extends Activity {
 				
 				return false;
 			}});
-		
+		Button salva=(Button)findViewById(R.id.btn_salva);
+		salva.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			/*int color=color_id.getId();
+			int icon=0;
+			String nome_cat="";*/
+				DbAdapter dbAdapter=new DbAdapter(getBaseContext());
+				dbAdapter.open();
+				if(categoria.getColor()==0 || categoria.getIcon()==0)
+				{
+					Toast.makeText(getApplicationContext(), "Scegliere icona e/o colore per aggiungere una nuova categoria", Toast.LENGTH_SHORT).show();
+
+				}
+				else
+				{
+				dbAdapter.createCatEn(categoria.getNome(), categoria.getColor(), categoria.getIcon());
+				Toast.makeText(getApplicationContext(), "Categoria Aggiunta", Toast.LENGTH_SHORT).show();
+				Log.v("Categoria selezionata",categoria.toString());
+				}
+			}
+		});
 		//TableLayout.LayoutParams params=new TableLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT);
 		//tab_cat.setLayoutParams(params);
 		//tab_cat.setBackgroundResource(R.color.entrata1);

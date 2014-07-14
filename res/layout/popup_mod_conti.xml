@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/popup_bg"
+    >
+     <TextView
+         android:id="@+id/infoSpesa"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Modifica Conto"
+         android:textColor="@color/white"
+         android:textSize="10pt"
+         android:gravity="center"
+         android:background="@drawable/popup_con"
+         />
+
+     <ScrollView
+         android:id="@+id/conti"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_above="@+id/bottom_bar"
+         android:layout_below="@+id/infoSpesa" >
+
+  <RelativeLayout
+      android:id="@+id/tutto"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" >
+      
+   <RelativeLayout
+       android:id="@+id/conti2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" >
+      
+        <LinearLayout
+        android:id="@+id/btn_addconto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intesta_addconto"
+        android:paddingTop="0px" 
+        android:background="@color/conto1">
+
+        <Button
+            android:id="@+id/btn_annulla"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/popup_con"
+            android:text="@string/annulla"
+            android:textColor="@color/white"
+             />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <Button
+            android:id="@+id/btn_salva"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/popup_con"
+            android:text="@string/salva"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/name_conto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_addconto"
+        android:layout_marginTop="32dp"
+        android:text="@string/nome"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <EditText
+        android:id="@+id/edit_nome"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/name_conto" />
+
+    <TextView
+        android:id="@+id/tipo_conto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edit_nome"
+        android:layout_marginTop="32dp"
+        android:text="@string/tipo1"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <EditText
+        android:id="@+id/edit_tipo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/tipo_conto" />
+
+    <TextView
+        android:id="@+id/value_conto"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edit_tipo"
+        android:layout_marginTop="30dp"
+        android:background="@color/conto"
+        android:text="€"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <EditText
+        android:id="@+id/edit_value"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/value_conto"
+        android:layout_toRightOf="@+id/value_conto"
+        android:background="@color/conto"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0,0"
+        android:textColor="@color/white" >
+
+        <requestFocus />
+    </EditText>
+    
+</RelativeLayout>
+</RelativeLayout>
+</ScrollView>
+</RelativeLayout>
+

@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.expenseManager.gestionespese.R;
 
+import Account.Categoria;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.Log;
@@ -31,9 +32,10 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	private HashMap<String,List<Integer>> _childImage,_childColor;
 	private HashMap<String,List<String>> _childCat;
     private TextView categoria;
+    private Categoria categoria_sel;
     private ImageView image;
     private ExpandableListView opt;
-	public ExpandableListAdapter(Context context,List<String> listDataHeader,HashMap<String,List<Integer>>childImage,HashMap<String,List<String>>childCateg,HashMap<String,List<Integer>>childColor,TextView categoria,ImageView imagine,ExpandableListView list)
+	public ExpandableListAdapter(Context context,List<String> listDataHeader,HashMap<String,List<Integer>>childImage,HashMap<String,List<String>>childCateg,HashMap<String,List<Integer>>childColor,TextView categoria,ImageView imagine,ExpandableListView list,Categoria categoria_sel)
 	{
 		this._context=context;
 		this._listDataHeader=listDataHeader;
@@ -43,6 +45,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		this.categoria=categoria;
 		this.image=imagine;
 		this.opt=list;
+		this.categoria_sel=categoria_sel;
 	}
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
@@ -74,7 +77,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             switch(groupPosition)
             {
             case 0: convertView = infalInflater.inflate(R.layout.list_icon, null);
-                    layoutCategoria cat=new layoutCategoria(convertView,image,opt);
+                    layoutCategoria cat=new layoutCategoria(convertView,image,opt,categoria_sel);
                     
                     break;
             case 1: convertView = infalInflater.inflate(R.layout.nome_categoria, null);
@@ -89,6 +92,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 						public void onClick(View v) {
 							// TODO Auto-generated method stub
 						categoria.setText(text.getText().toString());
+						categoria_sel.setNome(categoria.getText().toString());
 						opt.collapseGroup(1);
 						opt.expandGroup(2);
 						}
@@ -103,7 +107,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			switch(groupPosition)
             {
-            case 0: convertView = infalInflater.inflate(R.layout.list_icon, null);new layoutCategoria(convertView,image,opt);break;
+            case 0: convertView = infalInflater.inflate(R.layout.list_icon, null);new layoutCategoria(convertView,image,opt,categoria_sel);break;
             case 1: convertView = infalInflater.inflate(R.layout.nome_categoria, null);
             final EditText text=(EditText)convertView.findViewById(R.id.edit_nome_cat);/*TextView text1=(TextView)convertView.findViewById(R.id.cattext)*/;
             text.setText(categoria.getText().toString());
@@ -119,6 +123,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 				text.setFocusable(true);
 				InputMethodManager imm=(InputMethodManager)v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
 				imm.hideSoftInputFromWindow(text.getWindowToken(), 0);
+				categoria_sel.setNome(categoria.getText().toString());
 				opt.collapseGroup(1);
 				opt.expandGroup(2);
 				}
@@ -182,6 +187,11 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	public boolean hasStableIds() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	public Categoria getCategoria()
+	{
+		return categoria_sel;
 	}
 
 	@Override

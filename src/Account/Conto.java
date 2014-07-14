@@ -1,6 +1,8 @@
 package Account;
 
-public class Conto {
+import java.io.Serializable;
+
+public class Conto implements Serializable {
 	
 	private int id;
 	private String nome,tipo;

@@ -35,6 +35,7 @@ public class Conto extends Activity {
 	 private DbAdapter dbHelper; 
 	 private Cursor cursor;
 	 private double value;
+	 int cont=0;
 	 
 	 
 	@Override
@@ -92,6 +93,20 @@ public class Conto extends Activity {
 		dbHelper = new DbAdapter(this);
         dbHelper.open();
         cursor=dbHelper.fetchAllCont();
+       
+		float importo=0;
+		
+
+		
+		while(cursor.moveToNext())
+		{
+			cont++;
+			importo+=Float.parseFloat(cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_CONTOIM_AT)));
+		}
+		cursor.close();
+		dbHelper.close();
+		TextView bilancio=(TextView)findViewById(R.id.saldo_conto);
+		bilancio.setText("€ "+importo);
 	}
 	public boolean onKeyDown(int keyCode,KeyEvent event)
 	{

@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/principale"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popup_bg"
+    tools:context="com.expenseManager.gestionespese.Categoria$PlaceholderFragment" >
+
+    <RelativeLayout
+        android:id="@+id/intestaCate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup"
+        >
+
+    <ImageButton
+        android:id="@+id/addCategoria1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitEnd"
+        android:background="@drawable/popup"
+        android:src="@drawable/ic_menu_example" />
+
+    <TextView
+        android:id="@+id/intesta_cate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:text="Lista Categorie"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intestaCate"
+        android:paddingTop="10dp"
+        >
+    <RelativeLayout android:id="@+id/Categorie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </RelativeLayout>
+    </ScrollView>
+    </RelativeLayout>

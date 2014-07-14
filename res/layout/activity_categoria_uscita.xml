@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@color/blue"
+    tools:context="com.expenseManager.gestionespese.CategoriaUscita"
+    >
+
+ <LinearLayout 
+        android:id="@+id/intesta_addcatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="@color/spesa"
+        >
+        <TextView
+            android:textColor="@color/white"
+            android:text="@string/intest_addcatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="8pt"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btn_addcaten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intesta_addcatus"
+        android:paddingTop="0px" 
+        android:background="@color/spesa_1">
+
+        <Button
+            android:id="@+id/btn_annulla"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@color/spesa"
+            android:text="@string/annulla"
+            android:textColor="@color/white"
+             />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <Button
+            android:id="@+id/btn_salva"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/spesa"
+            android:text="@string/salva"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+   <RelativeLayout
+       android:id="@+id/tab_entrata"
+       android:layout_width="match_parent"
+       android:layout_height="350dp"
+       android:layout_below="@+id/btn_addcaten" >
+
+    <ExpandableListView
+        android:id="@+id/listStep"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp" />
+</RelativeLayout>
+
+   <LinearLayout
+       android:id="@+id/resultFinal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentLeft="true"
+       android:background="@color/grey"
+       android:orientation="horizontal" >
+
+       <ImageView
+           android:id="@+id/seticon"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:maxWidth="50dp"
+           android:maxHeight="50dp"
+           android:adjustViewBounds="true"
+           android:background="@color/spesa"
+           android:src="@drawable/caticon0"
+           android:scaleType="fitCenter" />
+
+       <TextView
+           android:id="@+id/cattext"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Categoria"
+           android:textColor="@color/black"
+           android:gravity="center_horizontal"
+           android:textSize="15pt" />
+   </LinearLayout>
+   </RelativeLayout>

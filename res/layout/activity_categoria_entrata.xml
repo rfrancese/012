@@ -37,7 +37,8 @@
 
         <Button
             android:id="@+id/btn_annulla"
-            android:layout_width="190dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:background="@color/entrata"
             android:text="@string/annulla"
@@ -47,12 +48,14 @@
         <Space
             android:layout_width="5dp"
             android:layout_height="wrap_content"
+            
             android:paddingLeft="5dp"
             android:paddingRight="5dp" />
 
         <Button
             android:id="@+id/btn_salva"
-            android:layout_width="190dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="@color/entrata"

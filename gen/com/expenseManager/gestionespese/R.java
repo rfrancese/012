@@ -9,37 +9,222 @@ package com.expenseManager.gestionespese;
 
 public final class R {
     public static final class array {
-        public static final int conto=0x7f040001;
+        public static final int conto=0x7f080001;
+        public static final int mese=0x7f080005;
         /**  Nav Drawer List Item Icons 
  Keep them in order as the titles are in 
+ Nav Drawer List Item Icons 
+ Keep them in order as the titles are in 
          */
-        public static final int nav_drawer_icons=0x7f040003;
-        public static final int nav_drawer_items=0x7f040002;
-        public static final int ordina=0x7f040000;
+        public static final int nav_drawer_icons=0x7f080004;
+        public static final int nav_drawer_items=0x7f080003;
+        public static final int ordina=0x7f080000;
+        public static final int rainbow=0x7f080006;
+        public static final int report=0x7f080002;
     }
     public static final class attr {
+        /** 
+    The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
+    MEDIUM_RECTANGLE, SMART_BANNER, WIDE_SKYSCRAPER, or
+    &lt;width&gt;x&lt;height&gt;.
+    
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int adSize=0x7f010000;
+        /** 
+    A comma-separated list of the supported ad sizes. The sizes must be one of
+    BANNER, FULL_BANNER, LEADERBOARD, MEDIUM_RECTANGLE, SMART_BANNER,
+    WIDE_SKYSCRAPER, or &lt;width&gt;x&lt;height&gt;.
+    
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int adSizes=0x7f010001;
+        /**  The ad unit ID. 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int adUnitId=0x7f010002;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraBearing=0x7f010004;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTargetLat=0x7f010005;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTargetLng=0x7f010006;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTilt=0x7f010007;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraZoom=0x7f010008;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>normal</code></td><td>1</td><td></td></tr>
+<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
+<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
+<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
+</table>
+         */
+        public static final int mapType=0x7f010003;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiCompass=0x7f010009;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiRotateGestures=0x7f01000a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiScrollGestures=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiTiltGestures=0x7f01000c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiZoomControls=0x7f01000d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiZoomGestures=0x7f01000e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int useViewLifecycle=0x7f01000f;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int zOrderOnTop=0x7f010010;
     }
     public static final class color {
-        public static final int altro=0x7f050009;
-        public static final int black=0x7f050011;
-        public static final int blue=0x7f050013;
-        public static final int conto=0x7f050008;
-        public static final int conto1=0x7f050012;
-        public static final int counter_text_bg=0x7f050004;
-        public static final int counter_text_color=0x7f050003;
-        public static final int entrata=0x7f05000a;
-        public static final int entrata1=0x7f05000b;
-        public static final int grey=0x7f050010;
-        public static final int impostazioni=0x7f05000e;
-        public static final int list_background=0x7f050001;
-        public static final int list_background_pressed=0x7f050005;
-        public static final int list_divider=0x7f050000;
-        public static final int list_item_title=0x7f050002;
-        public static final int panoramica=0x7f05000c;
-        public static final int report=0x7f05000d;
-        public static final int spesa=0x7f050007;
-        public static final int spesa_1=0x7f05000f;
-        public static final int white=0x7f050006;
+        public static final int altro=0x7f04001f;
+        public static final int azure=0x7f040012;
+        public static final int black=0x7f040027;
+        public static final int blue=0x7f040013;
+        /** VANNO BENE SCRITTI QUI I COLORI?..
+         */
+        public static final int bright_pink=0x7f04000a;
+        public static final int chartreuse=0x7f04000e;
+        public static final int common_action_bar_splitter=0x7f040009;
+        /**  Sign-in Button Colors 
+         */
+        public static final int common_signin_btn_dark_text_default=0x7f040000;
+        public static final int common_signin_btn_dark_text_disabled=0x7f040002;
+        public static final int common_signin_btn_dark_text_focused=0x7f040003;
+        public static final int common_signin_btn_dark_text_pressed=0x7f040001;
+        public static final int common_signin_btn_default_background=0x7f040008;
+        public static final int common_signin_btn_light_text_default=0x7f040004;
+        public static final int common_signin_btn_light_text_disabled=0x7f040006;
+        public static final int common_signin_btn_light_text_focused=0x7f040007;
+        public static final int common_signin_btn_light_text_pressed=0x7f040005;
+        public static final int common_signin_btn_text_dark=0x7f040029;
+        public static final int common_signin_btn_text_light=0x7f04002a;
+        public static final int conto=0x7f04001e;
+        public static final int conto1=0x7f040028;
+        public static final int counter_text_bg=0x7f04001a;
+        public static final int counter_text_color=0x7f040019;
+        public static final int cyan=0x7f040011;
+        public static final int entrata=0x7f040020;
+        public static final int entrata1=0x7f040021;
+        public static final int green=0x7f04000f;
+        public static final int grey=0x7f040026;
+        public static final int impostazioni=0x7f040024;
+        public static final int list_background=0x7f040017;
+        public static final int list_background_pressed=0x7f04001b;
+        public static final int list_divider=0x7f040016;
+        public static final int list_item_title=0x7f040018;
+        public static final int magenta=0x7f040015;
+        public static final int orange=0x7f04000c;
+        public static final int panoramica=0x7f040022;
+        public static final int red=0x7f04000b;
+        public static final int report=0x7f040023;
+        public static final int spesa=0x7f04001d;
+        public static final int spesa_1=0x7f040025;
+        public static final int spring_green=0x7f040010;
+        public static final int violet=0x7f040014;
+        public static final int white=0x7f04001c;
+        public static final int yellow=0x7f04000d;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -53,290 +238,375 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f060000;
-        public static final int activity_vertical_margin=0x7f060001;
-        public static final int navigation_drawer_width=0x7f060002;
+        public static final int activity_horizontal_margin=0x7f090000;
+        public static final int activity_vertical_margin=0x7f090001;
+        public static final int navigation_drawer_width=0x7f090002;
     }
     public static final class drawable {
         public static final int account_icon=0x7f020000;
         public static final int account_option=0x7f020001;
         public static final int add_expense=0x7f020002;
         public static final int add_income=0x7f020003;
-        public static final int caticon0=0x7f020004;
-        public static final int caticon1=0x7f020005;
-        public static final int caticon10=0x7f020006;
-        public static final int caticon11=0x7f020007;
-        public static final int caticon12=0x7f020008;
-        public static final int caticon13=0x7f020009;
-        public static final int caticon14=0x7f02000a;
-        public static final int caticon15=0x7f02000b;
-        public static final int caticon16=0x7f02000c;
-        public static final int caticon17=0x7f02000d;
-        public static final int caticon18=0x7f02000e;
-        public static final int caticon19=0x7f02000f;
-        public static final int caticon2=0x7f020010;
-        public static final int caticon20=0x7f020011;
-        public static final int caticon21=0x7f020012;
-        public static final int caticon22=0x7f020013;
-        public static final int caticon23=0x7f020014;
-        public static final int caticon24=0x7f020015;
-        public static final int caticon25=0x7f020016;
-        public static final int caticon26=0x7f020017;
-        public static final int caticon27=0x7f020018;
-        public static final int caticon28=0x7f020019;
-        public static final int caticon29=0x7f02001a;
-        public static final int caticon3=0x7f02001b;
-        public static final int caticon30=0x7f02001c;
-        public static final int caticon31=0x7f02001d;
-        public static final int caticon32=0x7f02001e;
-        public static final int caticon33=0x7f02001f;
-        public static final int caticon34=0x7f020020;
-        public static final int caticon35=0x7f020021;
-        public static final int caticon36=0x7f020022;
-        public static final int caticon37=0x7f020023;
-        public static final int caticon38=0x7f020024;
-        public static final int caticon39=0x7f020025;
-        public static final int caticon4=0x7f020026;
-        public static final int caticon40=0x7f020027;
-        public static final int caticon41=0x7f020028;
-        public static final int caticon42=0x7f020029;
-        public static final int caticon43=0x7f02002a;
-        public static final int caticon44=0x7f02002b;
-        public static final int caticon45=0x7f02002c;
-        public static final int caticon46=0x7f02002d;
-        public static final int caticon47=0x7f02002e;
-        public static final int caticon48=0x7f02002f;
-        public static final int caticon49=0x7f020030;
-        public static final int caticon5=0x7f020031;
-        public static final int caticon50=0x7f020032;
-        public static final int caticon51=0x7f020033;
-        public static final int caticon52=0x7f020034;
-        public static final int caticon53=0x7f020035;
-        public static final int caticon6=0x7f020036;
-        public static final int caticon7=0x7f020037;
-        public static final int caticon8=0x7f020038;
-        public static final int caticon9=0x7f020039;
-        public static final int counter_bg=0x7f02003a;
-        public static final int drawer_shadow=0x7f02003b;
-        public static final int gestionespese=0x7f02003c;
-        public static final int grafico=0x7f02003d;
-        public static final int ic_drawer=0x7f02003e;
-        public static final int ic_menu_example=0x7f02003f;
-        public static final int icon_bank=0x7f020040;
-        public static final int list_item_bg_normal=0x7f020041;
-        public static final int list_item_bg_pressed=0x7f020042;
-        public static final int list_selector=0x7f020043;
-        public static final int more_icon=0x7f020044;
-        public static final int next_btn=0x7f020045;
-        public static final int partita_doppia=0x7f020046;
-        public static final int popup=0x7f020047;
-        public static final int popup_bg=0x7f020048;
-        public static final int prev_btn=0x7f020049;
-        public static final int report_icon=0x7f02004a;
-        public static final int settings_icon=0x7f02004b;
-        public static final int stampa=0x7f02004c;
-        public static final int summary_icon=0x7f02004d;
-        public static final int transfer=0x7f02004e;
+        public static final int backup=0x7f020004;
+        public static final int caticon0=0x7f020005;
+        public static final int caticon1=0x7f020006;
+        public static final int caticon10=0x7f020007;
+        public static final int caticon11=0x7f020008;
+        public static final int caticon12=0x7f020009;
+        public static final int caticon13=0x7f02000a;
+        public static final int caticon14=0x7f02000b;
+        public static final int caticon15=0x7f02000c;
+        public static final int caticon16=0x7f02000d;
+        public static final int caticon17=0x7f02000e;
+        public static final int caticon18=0x7f02000f;
+        public static final int caticon19=0x7f020010;
+        public static final int caticon2=0x7f020011;
+        public static final int caticon20=0x7f020012;
+        public static final int caticon21=0x7f020013;
+        public static final int caticon22=0x7f020014;
+        public static final int caticon23=0x7f020015;
+        public static final int caticon24=0x7f020016;
+        public static final int caticon25=0x7f020017;
+        public static final int caticon26=0x7f020018;
+        public static final int caticon27=0x7f020019;
+        public static final int caticon28=0x7f02001a;
+        public static final int caticon29=0x7f02001b;
+        public static final int caticon3=0x7f02001c;
+        public static final int caticon30=0x7f02001d;
+        public static final int caticon31=0x7f02001e;
+        public static final int caticon32=0x7f02001f;
+        public static final int caticon33=0x7f020020;
+        public static final int caticon34=0x7f020021;
+        public static final int caticon35=0x7f020022;
+        public static final int caticon36=0x7f020023;
+        public static final int caticon37=0x7f020024;
+        public static final int caticon38=0x7f020025;
+        public static final int caticon39=0x7f020026;
+        public static final int caticon4=0x7f020027;
+        public static final int caticon40=0x7f020028;
+        public static final int caticon41=0x7f020029;
+        public static final int caticon42=0x7f02002a;
+        public static final int caticon43=0x7f02002b;
+        public static final int caticon44=0x7f02002c;
+        public static final int caticon45=0x7f02002d;
+        public static final int caticon46=0x7f02002e;
+        public static final int caticon47=0x7f02002f;
+        public static final int caticon48=0x7f020030;
+        public static final int caticon49=0x7f020031;
+        public static final int caticon5=0x7f020032;
+        public static final int caticon50=0x7f020033;
+        public static final int caticon51=0x7f020034;
+        public static final int caticon52=0x7f020035;
+        public static final int caticon53=0x7f020036;
+        public static final int caticon6=0x7f020037;
+        public static final int caticon7=0x7f020038;
+        public static final int caticon8=0x7f020039;
+        public static final int caticon9=0x7f02003a;
+        public static final int common_signin_btn_icon_dark=0x7f02003b;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f02003c;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f02003d;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f02003e;
+        public static final int common_signin_btn_icon_disabled_light=0x7f02003f;
+        public static final int common_signin_btn_icon_focus_dark=0x7f020040;
+        public static final int common_signin_btn_icon_focus_light=0x7f020041;
+        public static final int common_signin_btn_icon_light=0x7f020042;
+        public static final int common_signin_btn_icon_normal_dark=0x7f020043;
+        public static final int common_signin_btn_icon_normal_light=0x7f020044;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f020045;
+        public static final int common_signin_btn_icon_pressed_light=0x7f020046;
+        public static final int common_signin_btn_text_dark=0x7f020047;
+        public static final int common_signin_btn_text_disabled_dark=0x7f020048;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020049;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f02004a;
+        public static final int common_signin_btn_text_disabled_light=0x7f02004b;
+        public static final int common_signin_btn_text_focus_dark=0x7f02004c;
+        public static final int common_signin_btn_text_focus_light=0x7f02004d;
+        public static final int common_signin_btn_text_light=0x7f02004e;
+        public static final int common_signin_btn_text_normal_dark=0x7f02004f;
+        public static final int common_signin_btn_text_normal_light=0x7f020050;
+        public static final int common_signin_btn_text_pressed_dark=0x7f020051;
+        public static final int common_signin_btn_text_pressed_light=0x7f020052;
+        public static final int counter_bg=0x7f020053;
+        public static final int csv=0x7f020054;
+        public static final int databackup=0x7f020055;
+        public static final int drawer_shadow=0x7f020056;
+        public static final int gestionespese=0x7f020057;
+        public static final int grafico=0x7f020058;
+        public static final int ic_drawer=0x7f020059;
+        public static final int ic_menu_example=0x7f02005a;
+        public static final int ic_plusone_medium_off_client=0x7f02005b;
+        public static final int ic_plusone_small_off_client=0x7f02005c;
+        public static final int ic_plusone_standard_off_client=0x7f02005d;
+        public static final int ic_plusone_tall_off_client=0x7f02005e;
+        public static final int icon_bank=0x7f02005f;
+        public static final int labelentrata=0x7f020060;
+        public static final int labelspesa=0x7f020061;
+        public static final int list_item_bg_normal=0x7f020062;
+        public static final int list_item_bg_pressed=0x7f020063;
+        public static final int list_selector=0x7f020064;
+        public static final int listaentrate=0x7f020065;
+        public static final int listaspese=0x7f020066;
+        public static final int map=0x7f020067;
+        public static final int more_icon=0x7f020068;
+        public static final int next_btn=0x7f020069;
+        public static final int partita_doppia=0x7f02006a;
+        public static final int popup=0x7f02006b;
+        public static final int popup_bg=0x7f02006c;
+        public static final int popup_con=0x7f02006d;
+        public static final int popup_en=0x7f02006e;
+        public static final int popup_sp=0x7f02006f;
+        public static final int prev_btn=0x7f020070;
+        public static final int report_icon=0x7f020071;
+        public static final int settings_icon=0x7f020072;
+        public static final int stampa=0x7f020073;
+        public static final int summary_icon=0x7f020074;
+        public static final int transfer=0x7f020075;
+        public static final int xml=0x7f020076;
     }
     public static final class id {
-        public static final int Categorie=0x7f0b003f;
-        public static final int action_settings=0x7f0b00c2;
-        public static final int addCatEn=0x7f0b0013;
-        public static final int addConto=0x7f0b0049;
-        public static final int addEntrata=0x7f0b0055;
-        public static final int addSpesa=0x7f0b009c;
-        public static final int altro=0x7f0b0060;
-        public static final int altro_icon=0x7f0b0061;
-        public static final int back=0x7f0b0057;
-        public static final int ben_addentrata=0x7f0b0014;
-        public static final int ben_addspesa=0x7f0b002b;
-        public static final int ben_addtrasferimento=0x7f0b00a6;
-        public static final int btn_addCaten=0x7f0b00b5;
-        public static final int btn_addMappa=0x7f0b00b6;
-        public static final int btn_addcaten=0x7f0b0041;
-        public static final int btn_addconto=0x7f0b0001;
-        public static final int btn_addentrata=0x7f0b000b;
-        public static final int btn_addspesa=0x7f0b0023;
-        public static final int btn_addtrasferimento=0x7f0b009f;
-        public static final int btn_annulla=0x7f0b0002;
-        public static final int btn_salva=0x7f0b0003;
-        public static final int cat_addentrata=0x7f0b0010;
-        public static final int cat_addspesa=0x7f0b0027;
-        public static final int cat_addtrasferimento=0x7f0b00a3;
-        public static final int cate_addentrata=0x7f0b0012;
-        public static final int cate_addspesa1=0x7f0b0029;
-        public static final int cate_addtrasferimento=0x7f0b00a5;
-        public static final int cate_addtrasferimento1=0x7f0b00a8;
-        public static final int cattext=0x7f0b0046;
-        public static final int color=0x7f0b00b8;
-        public static final int conferma=0x7f0b00c1;
-        public static final int conti=0x7f0b004a;
-        public static final int conti12=0x7f0b004c;
-        public static final int conti2=0x7f0b004b;
-        public static final int conto=0x7f0b005f;
-        public static final int conto_icon=0x7f0b006a;
-        public static final int counter=0x7f0b00b2;
-        public static final int data_addentrata=0x7f0b0017;
-        public static final int data_addspesa=0x7f0b002d;
-        public static final int data_addtrasferimento=0x7f0b00a9;
-        public static final int date=0x7f0b005d;
-        public static final int descrizione=0x7f0b0016;
-        public static final int drawer_layout=0x7f0b003b;
-        public static final int edit_nome=0x7f0b0005;
-        public static final int edit_nome_cat=0x7f0b00c0;
-        public static final int edit_tipo=0x7f0b0007;
-        public static final int edit_value=0x7f0b0009;
-        public static final int entrata=0x7f0b000c;
-        public static final int entrata_data=0x7f0b001a;
-        public static final int entrata_icon=0x7f0b0069;
-        public static final int entrate=0x7f0b00be;
-        public static final int frame_container=0x7f0b003c;
-        public static final int getPosizione=0x7f0b003a;
-        public static final int griglia_dati=0x7f0b005e;
-        public static final int icon=0x7f0b00b0;
-        public static final int importo=0x7f0b000f;
-        public static final int impostazioni=0x7f0b0066;
-        public static final int impostazioni_icon=0x7f0b0067;
-        public static final int intesPanoramica=0x7f0b006f;
-        public static final int intes_conto=0x7f0b0047;
-        public static final int intesta_addcaten=0x7f0b0040;
-        public static final int intesta_addconto=0x7f0b0000;
-        public static final int intesta_addentrata=0x7f0b000a;
-        public static final int intesta_addspesa=0x7f0b0022;
-        public static final int intesta_cate=0x7f0b003e;
-        public static final int intesta_trasferimento=0x7f0b009e;
-        public static final int labBen_addentrata=0x7f0b0015;
-        public static final int labBen_addspesa=0x7f0b002c;
-        public static final int labCat_addentrata=0x7f0b0011;
-        public static final int labCat_addspesa=0x7f0b0028;
-        public static final int labCat_addtrasferimento=0x7f0b00a4;
-        public static final int labCat_addtrasferimento1=0x7f0b00a7;
-        public static final int labData_addentrata=0x7f0b0018;
-        public static final int labData_addspesa=0x7f0b002e;
-        public static final int labData_addtrasferimento=0x7f0b00aa;
-        public static final int labLuogo_addspesa=0x7f0b0038;
-        public static final int labNote_addentrata=0x7f0b0020;
-        public static final int labNote_addspesa=0x7f0b0035;
-        public static final int labNote_addtrasferimento=0x7f0b00ae;
-        public static final int labSelConto_addentrata=0x7f0b001c;
-        public static final int labSelConto_addspesa=0x7f0b0031;
-        public static final int layo_select=0x7f0b008a;
-        public static final int layout_entrata=0x7f0b0052;
-        public static final int layout_list=0x7f0b00ba;
-        public static final int layout_panoramica=0x7f0b006e;
-        public static final int layout_principale=0x7f0b005b;
-        public static final int layout_report=0x7f0b0089;
-        public static final int layout_spesa=0x7f0b009a;
-        public static final int lblListHeader=0x7f0b00b9;
-        public static final int linearLayout1=0x7f0b0053;
-        public static final int linearLayout2=0x7f0b0056;
-        public static final int linear_select=0x7f0b008b;
-        public static final int list=0x7f0b00af;
-        public static final int listAltro=0x7f0b00b3;
-        public static final int listStep=0x7f0b0043;
-        public static final int list_slidermenu=0x7f0b003d;
-        public static final int listaEntrate=0x7f0b0054;
-        public static final int listaSpese=0x7f0b009b;
-        public static final int luogo=0x7f0b0039;
-        public static final int luogo_addspesa=0x7f0b0037;
-        public static final int map=0x7f0b006c;
-        public static final int mese_anno=0x7f0b0058;
-        public static final int name_app=0x7f0b005c;
-        public static final int name_cont=0x7f0b004e;
-        public static final int name_conto=0x7f0b0004;
-        public static final int next=0x7f0b0059;
-        public static final int nome_cat=0x7f0b00bf;
-        public static final int note=0x7f0b0021;
-        public static final int note1=0x7f0b0036;
-        public static final int note_addentrata=0x7f0b001f;
-        public static final int note_addspesa=0x7f0b0034;
-        public static final int note_addtrasferimento=0x7f0b00ad;
-        public static final int number_addentrata=0x7f0b000d;
-        public static final int number_addspesa=0x7f0b0025;
-        public static final int number_addtrasferimento=0x7f0b00a1;
-        public static final int opt_cont=0x7f0b0051;
-        public static final int ordina_entrata=0x7f0b005a;
-        public static final int ordina_uscita=0x7f0b009d;
-        public static final int panAnn=0x7f0b0084;
-        public static final int panGiorn=0x7f0b0072;
-        public static final int panMens=0x7f0b007e;
-        public static final int panSett=0x7f0b0078;
-        public static final int panoramica=0x7f0b0062;
-        public static final int panoramica_icon=0x7f0b0063;
-        public static final int panoramica_l=0x7f0b0070;
-        public static final int report=0x7f0b0064;
-        public static final int report_icon=0x7f0b0065;
-        public static final int resultFinal=0x7f0b0044;
-        public static final int saldo_cont=0x7f0b004f;
-        public static final int saldo_conto=0x7f0b0048;
-        public static final int saldo_conto1=0x7f0b0050;
-        public static final int section_label=0x7f0b00b4;
-        public static final int selConto_addentrata=0x7f0b001b;
-        public static final int selConto_addspesa=0x7f0b0030;
-        public static final int sel_bilancio=0x7f0b0098;
-        public static final int sel_btncat=0x7f0b002a;
-        public static final int sel_categoria=0x7f0b008f;
-        public static final int sel_conti=0x7f0b0033;
-        public static final int sel_conto=0x7f0b004d;
-        public static final int sel_data=0x7f0b0092;
-        public static final int sel_dataA=0x7f0b0094;
-        public static final int sel_dataDA=0x7f0b0093;
-        public static final int sel_entrambi=0x7f0b008e;
-        public static final int sel_entrate=0x7f0b008c;
-        public static final int sel_grafico=0x7f0b0097;
-        public static final int sel_periodo=0x7f0b0091;
-        public static final int sel_tipo_graf=0x7f0b0095;
-        public static final int sel_txtconti=0x7f0b0032;
-        public static final int sel_uscite=0x7f0b008d;
-        public static final int selconto=0x7f0b001d;
-        public static final int select_conto=0x7f0b001e;
-        public static final int seticon=0x7f0b0045;
-        public static final int spesa=0x7f0b0024;
-        public static final int spesa_icon=0x7f0b0068;
-        public static final int spese=0x7f0b00bc;
-        public static final int spinner_categoria=0x7f0b0090;
-        public static final int stampa=0x7f0b0099;
-        public static final int symeur_addentrata=0x7f0b000e;
-        public static final int symeur_addspesa=0x7f0b0026;
-        public static final int symeur_addtrasferimento=0x7f0b00a2;
-        public static final int tab_entrata=0x7f0b0042;
-        public static final int text=0x7f0b00bb;
-        public static final int text1=0x7f0b00bd;
-        public static final int textData_addentrata=0x7f0b0019;
-        public static final int textData_addspesa=0x7f0b002f;
-        public static final int textData_addtrasferimento=0x7f0b00ab;
-        public static final int tipo_conto=0x7f0b0006;
-        public static final int tipo_rep=0x7f0b0096;
-        public static final int title=0x7f0b00b1;
-        public static final int trasferimento=0x7f0b00a0;
-        public static final int trasferimento_data=0x7f0b00ac;
-        public static final int trasferimento_icon=0x7f0b006b;
-        public static final int txtAred=0x7f0b0085;
-        public static final int txtAspe=0x7f0b0087;
-        public static final int txtGred=0x7f0b0073;
-        public static final int txtGspe=0x7f0b0075;
-        public static final int txtLabel=0x7f0b00b7;
-        public static final int txtMred=0x7f0b007f;
-        public static final int txtMspe=0x7f0b0081;
-        public static final int txtPann=0x7f0b0083;
-        public static final int txtPgio=0x7f0b0071;
-        public static final int txtPmens=0x7f0b007d;
-        public static final int txtPsett=0x7f0b0077;
-        public static final int txtSred=0x7f0b0079;
-        public static final int txtSspe=0x7f0b007b;
-        public static final int txtV_A_red=0x7f0b0086;
-        public static final int txtV_A_spe=0x7f0b0088;
-        public static final int txtV_M_red=0x7f0b0080;
-        public static final int txtV_M_spe=0x7f0b0082;
-        public static final int txtV_S_red=0x7f0b007a;
-        public static final int txtV_S_spe=0x7f0b007c;
-        public static final int txtVred=0x7f0b0074;
-        public static final int txtVspe=0x7f0b0076;
-        public static final int txtmappe=0x7f0b006d;
-        public static final int value_conto=0x7f0b0008;
+        public static final int Categorie=0x7f050047;
+        public static final int DataCre=0x7f050069;
+        public static final int DataDec=0x7f050068;
+        public static final int action_settings=0x7f0500ef;
+        public static final int add=0x7f0500ec;
+        public static final int addCatEn=0x7f050019;
+        public static final int addCategoria1=0x7f050045;
+        public static final int addConto=0x7f050053;
+        public static final int addData=0x7f050036;
+        public static final int addEntrata=0x7f05005f;
+        public static final int addQuery=0x7f050073;
+        public static final int addSpesa=0x7f0500be;
+        public static final int altro=0x7f05007a;
+        public static final int altro_icon=0x7f05007b;
+        public static final int annulla=0x7f0500e6;
+        public static final int back=0x7f050065;
+        public static final int backup=0x7f05006d;
+        public static final int ben_addentrata=0x7f05001a;
+        public static final int ben_addspesa=0x7f050031;
+        public static final int ben_addtrasferimento=0x7f0500c9;
+        public static final int bottom_bar=0x7f050061;
+        public static final int btn_Caten=0x7f0500d6;
+        public static final int btn_Catus=0x7f0500d5;
+        public static final int btn_addCaten=0x7f0500d2;
+        public static final int btn_addCatus=0x7f0500d4;
+        public static final int btn_addMappa=0x7f0500d3;
+        public static final int btn_addcaten=0x7f050049;
+        public static final int btn_addconto=0x7f050006;
+        public static final int btn_addentrata=0x7f050010;
+        public static final int btn_addspesa=0x7f050029;
+        public static final int btn_addtrasferimento=0x7f0500c1;
+        public static final int btn_annulla=0x7f050007;
+        public static final int btn_salva=0x7f050008;
+        public static final int cat_addentrata=0x7f050016;
+        public static final int cat_addspesa=0x7f05002d;
+        public static final int cat_addtrasferimento=0x7f0500c5;
+        public static final int cate_addentrata=0x7f050018;
+        public static final int cate_addspesa1=0x7f05002f;
+        public static final int cate_addtrasferimento=0x7f0500c7;
+        public static final int cate_addtrasferimento1=0x7f0500cb;
+        public static final int categoria=0x7f0500a6;
+        public static final int cattext=0x7f05004e;
+        public static final int chart=0x7f0500ed;
+        public static final int color=0x7f0500d8;
+        public static final int conferma=0x7f0500e1;
+        public static final int container=0x7f05006b;
+        public static final int conti=0x7f050054;
+        public static final int conti12=0x7f050056;
+        public static final int conti2=0x7f050055;
+        public static final int contieni_tutto=0x7f0500af;
+        public static final int conto=0x7f050079;
+        public static final int conto_icon=0x7f050084;
+        public static final int counter=0x7f0500cf;
+        public static final int crea_copia=0x7f05006e;
+        public static final int crea_cvs=0x7f050072;
+        public static final int crea_xml=0x7f050071;
+        public static final int data=0x7f0500a5;
+        public static final int data_addentrata=0x7f05001d;
+        public static final int data_addspesa=0x7f050033;
+        public static final int date=0x7f050077;
+        public static final int descrizione=0x7f05001c;
+        public static final int drawer_layout=0x7f050041;
+        public static final int edit_nome=0x7f05000a;
+        public static final int edit_nome_cat=0x7f0500e0;
+        public static final int edit_tipo=0x7f05000c;
+        public static final int edit_value=0x7f05000e;
+        public static final int elimina_conto=0x7f0500e4;
+        public static final int entrata=0x7f050012;
+        public static final int entrata_data=0x7f050020;
+        public static final int entrata_icon=0x7f050083;
+        public static final int entrate=0x7f0500de;
+        public static final int esegui=0x7f0500e5;
+        public static final int export=0x7f050070;
+        public static final int frame_container=0x7f050042;
+        public static final int getPosizione=0x7f050040;
+        public static final int griglia_dati=0x7f050078;
+        public static final int hybrid=0x7f050004;
+        public static final int icon=0x7f0500ce;
+        public static final int img_A=0x7f0500cc;
+        public static final int img_DA=0x7f0500c8;
+        public static final int importo=0x7f050015;
+        public static final int impostazioni=0x7f050080;
+        public static final int impostazioni_icon=0x7f050081;
+        public static final int infoSpesa=0x7f0500e7;
+        public static final int initApp=0x7f050075;
+        public static final int intesPanoramica=0x7f050089;
+        public static final int intes_conto=0x7f050051;
+        public static final int intestGrafico=0x7f05006a;
+        public static final int intestReport=0x7f0500a3;
+        public static final int intestTabella=0x7f0500a8;
+        public static final int intestTable=0x7f0500a4;
+        public static final int intestaCate=0x7f050044;
+        public static final int intesta_addcaten=0x7f050048;
+        public static final int intesta_addcatus=0x7f050050;
+        public static final int intesta_addconto=0x7f050005;
+        public static final int intesta_addentrata=0x7f05000f;
+        public static final int intesta_addspesa=0x7f050028;
+        public static final int intesta_cate=0x7f050046;
+        public static final int intesta_trasferimento=0x7f0500c0;
+        public static final int labBen_addentrata=0x7f05001b;
+        public static final int labBen_addspesa=0x7f050032;
+        public static final int labCat_addSpesa=0x7f05002e;
+        public static final int labCat_addentrata=0x7f050017;
+        public static final int labCat_addspesa=0x7f0500e9;
+        public static final int labCat_addtrasferimento=0x7f0500c6;
+        public static final int labCat_addtrasferimento1=0x7f0500ca;
+        public static final int labData_addentrata=0x7f05001e;
+        public static final int labData_addspesa=0x7f050034;
+        public static final int labLuogo_addspesa=0x7f05003e;
+        public static final int labNote_addentrata=0x7f050026;
+        public static final int labNote_addspesa=0x7f05003c;
+        public static final int labSelConto_addentrata=0x7f050022;
+        public static final int labSelConto_addspesa=0x7f050038;
+        public static final int layo_select=0x7f0500aa;
+        public static final int layout_entrata=0x7f05005c;
+        public static final int layout_list=0x7f0500da;
+        public static final int layout_panoramica=0x7f050088;
+        public static final int layout_principale=0x7f050074;
+        public static final int layout_report=0x7f0500a9;
+        public static final int layout_spesa=0x7f0500bc;
+        public static final int lblListHeader=0x7f0500d9;
+        public static final int linearLayout1=0x7f05005d;
+        public static final int linearLayout2=0x7f050062;
+        public static final int linear_select=0x7f0500ab;
+        public static final int list=0x7f0500cd;
+        public static final int listAltro=0x7f0500d0;
+        public static final int listEntr=0x7f050060;
+        public static final int listSpesa=0x7f0500bf;
+        public static final int listStep=0x7f05004b;
+        public static final int list_slidermenu=0x7f050043;
+        public static final int listaEntrate=0x7f05005e;
+        public static final int listaSpese=0x7f0500bd;
+        public static final int listuccia=0x7f050063;
+        public static final int luogo=0x7f05003f;
+        public static final int luogo_addspesa=0x7f05003d;
+        public static final int map=0x7f050086;
+        public static final int mese_anno=0x7f050067;
+        public static final int modifica_conto=0x7f0500e2;
+        public static final int name_app=0x7f050076;
+        public static final int name_cont=0x7f050058;
+        public static final int name_conto=0x7f050009;
+        public static final int new_series=0x7f0500ee;
+        public static final int next=0x7f050066;
+        public static final int nome_cat=0x7f0500df;
+        public static final int none=0x7f050000;
+        public static final int normal=0x7f050001;
+        public static final int not_record=0x7f050064;
+        public static final int note=0x7f050027;
+        public static final int note_addentrata=0x7f050025;
+        public static final int note_addspesa=0x7f05003b;
+        public static final int number_addentrata=0x7f050013;
+        public static final int number_addspesa=0x7f05002b;
+        public static final int number_addtrasferimento=0x7f0500c3;
+        public static final int opt_cont=0x7f05005b;
+        public static final int panAnn=0x7f05009e;
+        public static final int panGiorn=0x7f05008c;
+        public static final int panMens=0x7f050098;
+        public static final int panSett=0x7f050092;
+        public static final int panoramica=0x7f05007c;
+        public static final int panoramica_icon=0x7f05007d;
+        public static final int panoramica_l=0x7f05008a;
+        public static final int principale=0x7f05004f;
+        public static final int report=0x7f05007e;
+        public static final int report_icon=0x7f05007f;
+        public static final int resultFinal=0x7f05004c;
+        public static final int ripristina=0x7f05006f;
+        public static final int saldo_cont=0x7f050059;
+        public static final int saldo_conto=0x7f050052;
+        public static final int saldo_conto1=0x7f05005a;
+        public static final int satellite=0x7f050002;
+        public static final int scroll=0x7f050011;
+        public static final int section_label=0x7f0500d1;
+        public static final int selConto_addentrata=0x7f050021;
+        public static final int selConto_addspesa=0x7f050037;
+        public static final int sel_bilancio=0x7f0500ba;
+        public static final int sel_btncat=0x7f050030;
+        public static final int sel_categoria=0x7f0500b0;
+        public static final int sel_conti=0x7f05003a;
+        public static final int sel_conto=0x7f050057;
+        public static final int sel_data=0x7f0500b3;
+        public static final int sel_dataA=0x7f0500b5;
+        public static final int sel_dataDA=0x7f0500b4;
+        public static final int sel_entrambi=0x7f0500ae;
+        public static final int sel_entrate=0x7f0500ac;
+        public static final int sel_grafico=0x7f0500b9;
+        public static final int sel_periodo=0x7f0500b2;
+        public static final int sel_tipo_graf=0x7f0500b6;
+        public static final int sel_txtconti=0x7f050039;
+        public static final int sel_uscite=0x7f0500ad;
+        public static final int selconto=0x7f050023;
+        public static final int seleRadio=0x7f0500b8;
+        public static final int select_conto=0x7f050024;
+        public static final int seticon=0x7f05004d;
+        public static final int spesa=0x7f05002a;
+        public static final int spesa_icon=0x7f050082;
+        public static final int spese=0x7f0500dc;
+        public static final int spinner_categoria=0x7f0500b1;
+        public static final int stampa=0x7f0500bb;
+        public static final int symeur_addentrata=0x7f050014;
+        public static final int symeur_addspesa=0x7f05002c;
+        public static final int symeur_addtrasferimento=0x7f0500c4;
+        public static final int tab_entrata=0x7f05004a;
+        public static final int terrain=0x7f050003;
+        public static final int text=0x7f0500db;
+        public static final int text1=0x7f0500dd;
+        public static final int textData_addentrata=0x7f05001f;
+        public static final int textData_addspesa=0x7f050035;
+        public static final int tipo_conto=0x7f05000b;
+        public static final int tipo_rep=0x7f0500b7;
+        public static final int title=0x7f05006c;
+        public static final int trasferimento=0x7f0500c2;
+        public static final int trasferimento_conto=0x7f0500e3;
+        public static final int trasferimento_icon=0x7f050085;
+        public static final int tutto=0x7f0500e8;
+        public static final int txtAred=0x7f05009f;
+        public static final int txtAspe=0x7f0500a1;
+        public static final int txtGred=0x7f05008d;
+        public static final int txtGspe=0x7f05008f;
+        public static final int txtLabel=0x7f0500d7;
+        public static final int txtMred=0x7f050099;
+        public static final int txtMspe=0x7f05009b;
+        public static final int txtPann=0x7f05009d;
+        public static final int txtPgio=0x7f05008b;
+        public static final int txtPmens=0x7f050097;
+        public static final int txtPsett=0x7f050091;
+        public static final int txtSred=0x7f050093;
+        public static final int txtSspe=0x7f050095;
+        public static final int txtV_A_red=0x7f0500a0;
+        public static final int txtV_A_spe=0x7f0500a2;
+        public static final int txtV_M_red=0x7f05009a;
+        public static final int txtV_M_spe=0x7f05009c;
+        public static final int txtV_S_red=0x7f050094;
+        public static final int txtV_S_spe=0x7f050096;
+        public static final int txtVred=0x7f05008e;
+        public static final int txtVspe=0x7f050090;
+        public static final int txtmappe=0x7f050087;
+        public static final int uscita=0x7f0500a7;
+        public static final int value_conto=0x7f05000d;
+        public static final int xValue=0x7f0500ea;
+        public static final int yValue=0x7f0500eb;
     }
     public static final class integer {
-        public static final int google_play_services_version=0x7f090000;
+        public static final int google_play_services_version=0x7f070000;
     }
     public static final class layout {
         public static final int activity_aggiungi_conto=0x7f030000;
@@ -345,117 +615,266 @@ public final class R {
         public static final int activity_altro=0x7f030003;
         public static final int activity_categoria=0x7f030004;
         public static final int activity_categoria_entrata=0x7f030005;
-        public static final int activity_conto=0x7f030006;
-        public static final int activity_entrata=0x7f030007;
-        public static final int activity_main=0x7f030008;
-        public static final int activity_mappe=0x7f030009;
-        public static final int activity_panoramica=0x7f03000a;
-        public static final int activity_report=0x7f03000b;
-        public static final int activity_spesa=0x7f03000c;
-        public static final int activity_trasferimento_conto=0x7f03000d;
-        public static final int categorie=0x7f03000e;
-        public static final int drawer_list_item=0x7f03000f;
-        public static final int fragment_altro=0x7f030010;
-        public static final int fragment_categoria=0x7f030011;
-        public static final int fragment_home=0x7f030012;
-        public static final int fragment_navigation_drawer=0x7f030013;
-        public static final int list_color=0x7f030014;
-        public static final int list_group=0x7f030015;
-        public static final int list_icon=0x7f030016;
-        public static final int list_item=0x7f030017;
-        public static final int my_menu=0x7f030018;
-        public static final int nome_categoria=0x7f030019;
-        public static final int popup_conti=0x7f03001a;
+        public static final int activity_categoria_us=0x7f030006;
+        public static final int activity_categoria_uscita=0x7f030007;
+        public static final int activity_conto=0x7f030008;
+        public static final int activity_entrata=0x7f030009;
+        public static final int activity_grafico_barre=0x7f03000a;
+        public static final int activity_grafico_torta=0x7f03000b;
+        public static final int activity_impostazioni=0x7f03000c;
+        public static final int activity_login=0x7f03000d;
+        public static final int activity_main=0x7f03000e;
+        public static final int activity_mappe=0x7f03000f;
+        public static final int activity_panoramica=0x7f030010;
+        public static final int activity_partita_doppia=0x7f030011;
+        public static final int activity_report=0x7f030012;
+        public static final int activity_spesa=0x7f030013;
+        public static final int activity_trasferimento_conto=0x7f030014;
+        public static final int categorie=0x7f030015;
+        public static final int drawer_list_item=0x7f030016;
+        public static final int fragment_altro=0x7f030017;
+        public static final int fragment_categoria=0x7f030018;
+        public static final int fragment_categoria_u=0x7f030019;
+        public static final int fragment_grafico_barre=0x7f03001a;
+        public static final int fragment_grafico_torta=0x7f03001b;
+        public static final int fragment_home=0x7f03001c;
+        public static final int fragment_impostazioni=0x7f03001d;
+        public static final int fragment_login=0x7f03001e;
+        public static final int fragment_navigation_drawer=0x7f03001f;
+        public static final int fragment_partita_doppia=0x7f030020;
+        public static final int list_color=0x7f030021;
+        public static final int list_group=0x7f030022;
+        public static final int list_icon=0x7f030023;
+        public static final int list_item=0x7f030024;
+        public static final int my_menu=0x7f030025;
+        public static final int nome_categoria=0x7f030026;
+        public static final int optconti_dialog=0x7f030027;
+        public static final int popup_conti=0x7f030028;
+        public static final int popup_info=0x7f030029;
+        public static final int popup_infoen=0x7f03002a;
+        public static final int popup_mod_conti=0x7f03002b;
+        public static final int spinner_item=0x7f03002c;
+        public static final int xy_chart=0x7f03002d;
     }
     public static final class menu {
-        public static final int aggiungi_conto=0x7f0a0000;
-        public static final int aggiungi_entrata=0x7f0a0001;
-        public static final int aggiungi_spesa=0x7f0a0002;
-        public static final int altro=0x7f0a0003;
-        public static final int categoria=0x7f0a0004;
-        public static final int categoria_entrata=0x7f0a0005;
-        public static final int conto=0x7f0a0006;
-        public static final int entrata=0x7f0a0007;
-        public static final int global=0x7f0a0008;
-        public static final int main=0x7f0a0009;
-        public static final int mappe=0x7f0a000a;
-        public static final int panoramica=0x7f0a000b;
-        public static final int report=0x7f0a000c;
-        public static final int spesa=0x7f0a000d;
-        public static final int trasferimento_conto=0x7f0a000e;
+        public static final int aggiungi_conto=0x7f0b0000;
+        public static final int aggiungi_entrata=0x7f0b0001;
+        public static final int aggiungi_spesa=0x7f0b0002;
+        public static final int altro=0x7f0b0003;
+        public static final int categoria=0x7f0b0004;
+        public static final int categoria_entrata=0x7f0b0005;
+        public static final int categoria_u=0x7f0b0006;
+        public static final int categoria_uscita=0x7f0b0007;
+        public static final int conto=0x7f0b0008;
+        public static final int entrata=0x7f0b0009;
+        public static final int global=0x7f0b000a;
+        public static final int grafico_barre=0x7f0b000b;
+        public static final int grafico_torta=0x7f0b000c;
+        public static final int impostazioni=0x7f0b000d;
+        public static final int login=0x7f0b000e;
+        public static final int main=0x7f0b000f;
+        public static final int mappe=0x7f0b0010;
+        public static final int panoramica=0x7f0b0011;
+        public static final int partita_doppia=0x7f0b0012;
+        public static final int report=0x7f0b0013;
+        public static final int spesa=0x7f0b0014;
+        public static final int trasferimento_conto=0x7f0b0015;
     }
     public static final class string {
-        public static final int A=0x7f070009;
-        public static final int DA=0x7f070008;
-        public static final int Report1=0x7f070016;
-        public static final int a_default=0x7f07000a;
-        public static final int action_example=0x7f070045;
-        public static final int action_settings=0x7f070003;
-        public static final int addConto=0x7f07000f;
-        public static final int altro=0x7f070015;
-        public static final int annulla=0x7f07001a;
-        public static final int app_name=0x7f070002;
-        public static final int bilancio=0x7f07001e;
-        public static final int cat_default=0x7f070021;
-        public static final int categoria=0x7f070020;
-        public static final int conto=0x7f070010;
-        public static final int creditore=0x7f070022;
-        public static final int da_default=0x7f07000b;
-        public static final int data=0x7f070006;
-        public static final int data1=0x7f070029;
-        public static final int debitore=0x7f070034;
-        public static final int desc=0x7f070039;
-        public static final int desc_list_item_icon=0x7f070000;
-        public static final int entrambe=0x7f070024;
-        public static final int entrata=0x7f070012;
-        public static final int filtri=0x7f070026;
-        public static final int grafo=0x7f07001d;
-        public static final int hello_world=0x7f070004;
-        public static final int impostazioni=0x7f070011;
-        public static final int intest_addcaten=0x7f070001;
-        public static final int intest_addentrata=0x7f070031;
-        public static final int intest_addspesa=0x7f070030;
-        public static final int intest_trasconto=0x7f07000c;
-        public static final int luogo=0x7f07002e;
-        public static final int luogo1=0x7f07002f;
-        public static final int myApp=0x7f070005;
-        public static final int navigation_drawer_close=0x7f070044;
-        public static final int navigation_drawer_open=0x7f070043;
-        public static final int nome=0x7f07000d;
-        public static final int note=0x7f07002c;
-        public static final int opt=0x7f07002d;
-        public static final int ordina1=0x7f070037;
-        public static final int panoramica=0x7f070013;
-        public static final int periodo=0x7f070027;
-        public static final int report=0x7f070014;
-        public static final int salva=0x7f07001b;
-        public static final int sel_conto=0x7f07002a;
-        public static final int sel_conto_default=0x7f07002b;
-        public static final int selezione=0x7f070023;
-        public static final int spesa=0x7f070007;
-        public static final int spesa1=0x7f070018;
-        public static final int stampa=0x7f07001f;
-        public static final int symeur=0x7f07001c;
-        public static final int tipo=0x7f070028;
-        public static final int tipo1=0x7f07000e;
-        public static final int title=0x7f070038;
-        public static final int title_activity_aggiungi_conto=0x7f07003b;
-        public static final int title_activity_aggiungi_entrata=0x7f070033;
-        public static final int title_activity_aggiungi_spesa=0x7f070019;
-        public static final int title_activity_altro=0x7f07003f;
-        public static final int title_activity_categoria=0x7f070046;
-        public static final int title_activity_categoria_entrata=0x7f07003d;
-        public static final int title_activity_conto=0x7f07003a;
-        public static final int title_activity_entrata=0x7f070032;
-        public static final int title_activity_mappe=0x7f07003e;
-        public static final int title_activity_panoramica=0x7f070035;
-        public static final int title_activity_report=0x7f070036;
-        public static final int title_activity_spesa=0x7f070017;
-        public static final int title_activity_trasferimento_conto=0x7f07003c;
-        public static final int title_section1=0x7f070040;
-        public static final int title_section2=0x7f070041;
-        public static final int title_section3=0x7f070042;
-        public static final int uscita=0x7f070025;
+        public static final int A=0x7f060026;
+        public static final int DA=0x7f060025;
+        public static final int Report1=0x7f060033;
+        public static final int a_default=0x7f060027;
+        public static final int action_example=0x7f060062;
+        public static final int action_forgot_password=0x7f060074;
+        public static final int action_settings=0x7f060020;
+        public static final int action_sign_in_register=0x7f060072;
+        public static final int action_sign_in_short=0x7f060073;
+        public static final int add=0x7f060067;
+        public static final int addConto=0x7f06002c;
+        public static final int add_values=0x7f060064;
+        public static final int altro=0x7f060032;
+        public static final int annulla=0x7f060037;
+        public static final int app_name=0x7f06001f;
+        /**   Title for notification shown when GooglePlayServices needs to be
+        enabled for a application to work. [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_needs_enabling_title=0x7f060015;
+        /**   Title for notification shown when GooglePlayServices needs to be
+        installed for a application to work. [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_needs_installation_title=0x7f060016;
+        /**   Title for notification shown when GooglePlayServices needs to be
+        udpated for a application to work. [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_needs_update_title=0x7f060017;
+        /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=42] 
+         */
+        public static final int auth_client_play_services_err_notification_msg=0x7f060018;
+        /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
+         */
+        public static final int auth_client_requested_by_msg=0x7f060019;
+        /**   Title for notification shown when a bad version of GooglePlayServices
+        has been installed and needs correction for an application to work.
+        [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_using_bad_version_title=0x7f060014;
+        public static final int bilancio=0x7f06003b;
+        public static final int cat_default=0x7f06003e;
+        public static final int categoria=0x7f06003d;
+        /**  Button in confirmation dialog to enable Google Play services.  Clicking it
+        will direct user to application settings of Google Play services where they
+        can enable it [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_enable_button=0x7f060006;
+        /**  Message in confirmation dialog informing user they need to enable
+        Google Play services in application settings [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_enable_text=0x7f060005;
+        /**  Title of confirmation dialog informing user they need to enable
+        Google Play services in application settings [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_enable_title=0x7f060004;
+        /**  Button in confirmation dialog for installing Google Play services [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_install_button=0x7f060003;
+        /**  (For phones) Message in confirmation dialog informing user that
+        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_install_text_phone=0x7f060001;
+        /**  (For tablets) Message in confirmation dialog informing user that
+        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_install_text_tablet=0x7f060002;
+        /**  Title of confirmation dialog informing user that they need to install
+        Google Play services (from Play Store) [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_install_title=0x7f060000;
+        /**  Message in confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_invalid_account_text=0x7f06000c;
+        /**  Title of confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_invalid_account_title=0x7f06000b;
+        /**  Message in confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_network_error_text=0x7f06000a;
+        /**  Title of confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_network_error_title=0x7f060009;
+        /**  Message in confirmation dialog informing user there is an unknown issue in Google Play
+        services [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unknown_issue=0x7f06000d;
+        /**  Message in confirmation dialog informing user that date on the device is not correct,
+    causing certificate checks to fail. [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unsupported_date_text=0x7f060010;
+        /**  Message in confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unsupported_text=0x7f06000f;
+        /**  Title of confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_unsupported_title=0x7f06000e;
+        /**  Button in confirmation dialog for updating Google Play services [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_update_button=0x7f060011;
+        /**  Message in confirmation dialog informing user that they need to update
+        Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_update_text=0x7f060008;
+        /**  Title of confirmation dialog informing user that they need to update
+        Google Play services (from Play Store) [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_update_title=0x7f060007;
+        /**  Sign-in button text [CHAR LIMIT=15] 
+         */
+        public static final int common_signin_button_text=0x7f060012;
+        /**  Long form sign-in button text [CHAR LIMIT=30] 
+         */
+        public static final int common_signin_button_text_long=0x7f060013;
+        public static final int conto=0x7f06002d;
+        public static final int creditore=0x7f06003f;
+        public static final int da_default=0x7f060028;
+        public static final int data=0x7f060023;
+        public static final int data1=0x7f060046;
+        public static final int debitore=0x7f060051;
+        public static final int desc=0x7f060056;
+        public static final int desc_list_item_icon=0x7f06001c;
+        public static final int entrambe=0x7f060041;
+        public static final int entrata=0x7f06002f;
+        public static final int error_field_required=0x7f060079;
+        public static final int error_incorrect_password=0x7f060078;
+        public static final int error_invalid_email=0x7f060076;
+        public static final int error_invalid_password=0x7f060077;
+        public static final int filtri=0x7f060043;
+        public static final int grafo=0x7f06003a;
+        public static final int hello_world=0x7f060021;
+        public static final int impostazioni=0x7f06002e;
+        public static final int infoSpesa=0x7f06001b;
+        public static final int intest_addcaten=0x7f06001d;
+        public static final int intest_addcatus=0x7f06001e;
+        public static final int intest_addentrata=0x7f06004e;
+        public static final int intest_addspesa=0x7f06004d;
+        public static final int intest_trasconto=0x7f060029;
+        /**  Location client code resources (prefix with location_client) 
+         */
+        public static final int location_client_powered_by_google=0x7f06001a;
+        public static final int login_progress_signing_in=0x7f060075;
+        public static final int luogo=0x7f06004b;
+        public static final int luogo1=0x7f06004c;
+        public static final int myApp=0x7f060022;
+        public static final int navigation_drawer_close=0x7f060061;
+        public static final int navigation_drawer_open=0x7f060060;
+        public static final int new_series=0x7f060068;
+        public static final int nome=0x7f06002a;
+        public static final int note=0x7f060049;
+        public static final int opt=0x7f06004a;
+        public static final int ordina1=0x7f060054;
+        public static final int panoramica=0x7f060030;
+        public static final int periodo=0x7f060044;
+        /**  Strings related to login 
+         */
+        public static final int prompt_email=0x7f060070;
+        public static final int prompt_password=0x7f060071;
+        public static final int report=0x7f060031;
+        public static final int salva=0x7f060038;
+        public static final int sel_conto=0x7f060047;
+        public static final int sel_conto_default=0x7f060048;
+        public static final int selezione=0x7f060040;
+        public static final int spesa=0x7f060024;
+        public static final int spesa1=0x7f060035;
+        public static final int stampa=0x7f06003c;
+        public static final int symeur=0x7f060039;
+        public static final int tipo=0x7f060045;
+        public static final int tipo1=0x7f06002b;
+        public static final int title=0x7f060055;
+        public static final int title_activity_aggiungi_conto=0x7f060058;
+        public static final int title_activity_aggiungi_entrata=0x7f060050;
+        public static final int title_activity_aggiungi_spesa=0x7f060036;
+        public static final int title_activity_altro=0x7f06005c;
+        public static final int title_activity_categoria=0x7f060063;
+        public static final int title_activity_categoria_entrata=0x7f06005a;
+        public static final int title_activity_categoria_us=0x7f06006d;
+        public static final int title_activity_categoria_uscita=0x7f06006c;
+        public static final int title_activity_conto=0x7f060057;
+        public static final int title_activity_entrata=0x7f06004f;
+        public static final int title_activity_grafico_barre=0x7f06006b;
+        public static final int title_activity_grafico_torta=0x7f06006a;
+        public static final int title_activity_impostazioni=0x7f06006f;
+        public static final int title_activity_login=0x7f060069;
+        public static final int title_activity_mappe=0x7f06005b;
+        public static final int title_activity_panoramica=0x7f060052;
+        public static final int title_activity_partita_doppia=0x7f06006e;
+        public static final int title_activity_report=0x7f060053;
+        public static final int title_activity_spesa=0x7f060034;
+        public static final int title_activity_trasferimento_conto=0x7f060059;
+        public static final int title_section1=0x7f06005d;
+        public static final int title_section2=0x7f06005e;
+        public static final int title_section3=0x7f06005f;
+        public static final int uscita=0x7f060042;
+        public static final int x=0x7f060065;
+        public static final int y=0x7f060066;
     }
     public static final class style {
         /** 
@@ -474,12 +893,334 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080000;
+        public static final int AppBaseTheme=0x7f0a0000;
         /**  Application theme. 
          */
-        public static final int AppTheme=0x7f080001;
-        /**   My Theme  
+        public static final int AppTheme=0x7f0a0001;
+        public static final int LoginFormContainer=0x7f0a0003;
+        /**  My Theme 
          */
-        public static final int MyTheme=0x7f080002;
+        public static final int MyTheme=0x7f0a0002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a AdsAttrs.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #AdsAttrs_adSize com.expenseManager.gestionespese:adSize}</code></td><td>
+    The size of the ad.</td></tr>
+           <tr><td><code>{@link #AdsAttrs_adSizes com.expenseManager.gestionespese:adSizes}</code></td><td>
+    A comma-separated list of the supported ad sizes.</td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId com.expenseManager.gestionespese:adUnitId}</code></td><td> The ad unit ID.</td></tr>
+           </table>
+           @see #AdsAttrs_adSize
+           @see #AdsAttrs_adSizes
+           @see #AdsAttrs_adUnitId
+         */
+        public static final int[] AdsAttrs = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>
+          @attr description
+          
+    The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
+    MEDIUM_RECTANGLE, SMART_BANNER, WIDE_SKYSCRAPER, or
+    &lt;width&gt;x&lt;height&gt;.
+    
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.expenseManager.gestionespese:adSize
+        */
+        public static final int AdsAttrs_adSize = 0;
+        /**
+          <p>
+          @attr description
+          
+    A comma-separated list of the supported ad sizes. The sizes must be one of
+    BANNER, FULL_BANNER, LEADERBOARD, MEDIUM_RECTANGLE, SMART_BANNER,
+    WIDE_SKYSCRAPER, or &lt;width&gt;x&lt;height&gt;.
+    
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.expenseManager.gestionespese:adSizes
+        */
+        public static final int AdsAttrs_adSizes = 1;
+        /**
+          <p>
+          @attr description
+           The ad unit ID. 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.expenseManager.gestionespese:adUnitId
+        */
+        public static final int AdsAttrs_adUnitId = 2;
+        /** Attributes that can be used with a MapAttrs.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.expenseManager.gestionespese:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.expenseManager.gestionespese:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.expenseManager.gestionespese:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.expenseManager.gestionespese:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.expenseManager.gestionespese:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.expenseManager.gestionespese:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.expenseManager.gestionespese:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.expenseManager.gestionespese:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.expenseManager.gestionespese:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.expenseManager.gestionespese:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.expenseManager.gestionespese:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.expenseManager.gestionespese:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.expenseManager.gestionespese:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.expenseManager.gestionespese:zOrderOnTop}</code></td><td></td></tr>
+           </table>
+           @see #MapAttrs_cameraBearing
+           @see #MapAttrs_cameraTargetLat
+           @see #MapAttrs_cameraTargetLng
+           @see #MapAttrs_cameraTilt
+           @see #MapAttrs_cameraZoom
+           @see #MapAttrs_mapType
+           @see #MapAttrs_uiCompass
+           @see #MapAttrs_uiRotateGestures
+           @see #MapAttrs_uiScrollGestures
+           @see #MapAttrs_uiTiltGestures
+           @see #MapAttrs_uiZoomControls
+           @see #MapAttrs_uiZoomGestures
+           @see #MapAttrs_useViewLifecycle
+           @see #MapAttrs_zOrderOnTop
+         */
+        public static final int[] MapAttrs = {
+            0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006,
+            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a,
+            0x7f01000b, 0x7f01000c, 0x7f01000d, 0x7f01000e,
+            0x7f01000f, 0x7f010010
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#cameraBearing}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:cameraBearing
+        */
+        public static final int MapAttrs_cameraBearing = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#cameraTargetLat}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:cameraTargetLat
+        */
+        public static final int MapAttrs_cameraTargetLat = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#cameraTargetLng}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:cameraTargetLng
+        */
+        public static final int MapAttrs_cameraTargetLng = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#cameraTilt}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:cameraTilt
+        */
+        public static final int MapAttrs_cameraTilt = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#cameraZoom}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:cameraZoom
+        */
+        public static final int MapAttrs_cameraZoom = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#mapType}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>normal</code></td><td>1</td><td></td></tr>
+<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
+<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
+<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
+</table>
+          @attr name com.expenseManager.gestionespese:mapType
+        */
+        public static final int MapAttrs_mapType = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#uiCompass}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:uiCompass
+        */
+        public static final int MapAttrs_uiCompass = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#uiRotateGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:uiRotateGestures
+        */
+        public static final int MapAttrs_uiRotateGestures = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#uiScrollGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:uiScrollGestures
+        */
+        public static final int MapAttrs_uiScrollGestures = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#uiTiltGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:uiTiltGestures
+        */
+        public static final int MapAttrs_uiTiltGestures = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#uiZoomControls}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:uiZoomControls
+        */
+        public static final int MapAttrs_uiZoomControls = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#uiZoomGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:uiZoomGestures
+        */
+        public static final int MapAttrs_uiZoomGestures = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#useViewLifecycle}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:useViewLifecycle
+        */
+        public static final int MapAttrs_useViewLifecycle = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.expenseManager.gestionespese.R.attr#zOrderOnTop}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.expenseManager.gestionespese:zOrderOnTop
+        */
+        public static final int MapAttrs_zOrderOnTop = 13;
+    };
 }

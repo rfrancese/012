@@ -5,23 +5,40 @@
     android:background="@drawable/popup_bg"
     tools:context="com.expenseManager.gestionespese.Categoria$PlaceholderFragment" >
 
-    <TextView
-        android:id="@+id/intesta_cate"
+    <RelativeLayout
+        android:id="@+id/intestaCate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista Categorie"
-        android:paddingLeft="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
         android:background="@drawable/popup"
+        >
+
+    <ImageButton
+        android:id="@+id/addCategoria1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitEnd"
+        android:background="@drawable/popup"
+        android:src="@drawable/ic_menu_example" />
+
+    <TextView
+        android:id="@+id/intesta_cate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:text="Lista Categorie"
         android:textColor="@color/white"
-        android:textSize="8pt"
-         />
+        android:textSize="8pt" />
+
+    </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/intesta_cate"
+        android:layout_below="@+id/intestaCate"
         android:paddingTop="10dp"
         >
     <RelativeLayout android:id="@+id/Categorie"

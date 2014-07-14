@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context="com.expenseManager.gestionespese.Impostazioni"
+    tools:ignore="MergeRootFrame" >
+
+<TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:gravity="center|left"
+    android:background="@color/impostazioni"
+    android:text="@string/impostazioni"
+    android:textColor="@color/white"
+    android:textSize="10pt"
+    
+     />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/title"
+    >
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    
+    >
+<LinearLayout
+    android:id="@+id/backup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    
+    >
+<TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Dati di backup e ripristino"
+    android:textColor="@color/white"
+    android:textSize="8pt"
+    android:background="@color/impostazioni"
+    />
+<Button 
+    android:id="@+id/crea_copia"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Crea backup"
+    android:drawableLeft="@drawable/backup"
+    android:textColor="@color/white"
+    
+    />
+<Button
+    android:id="@+id/ripristina"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Ripristina backup"
+    android:textColor="@color/white"
+    android:drawableLeft="@drawable/databackup"
+     />
+</LinearLayout>
+<LinearLayout 
+    android:id="@+id/export"
+    android:layout_below="@+id/backup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+ <TextView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Esportazione dati"
+    android:textColor="@color/white"
+    android:textSize="8pt"
+    android:background="@color/impostazioni"
+    />
+<Button 
+    android:id="@+id/crea_xml"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Esporta dati in XML"
+    android:drawableLeft="@drawable/xml"
+    android:textColor="@color/white"
+    
+    />
+<Button
+    android:id="@+id/crea_cvs"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Esporta i dati in CSV"
+    android:drawableLeft="@drawable/csv"
+    android:textColor="@color/white"
+     />   
+</LinearLayout> 
+</RelativeLayout> 
+</ScrollView>
+</RelativeLayout>
+
+

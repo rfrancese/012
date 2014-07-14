@@ -39,6 +39,27 @@ public class HomeFragment extends Fragment {
               startActivity(altro);
 			}
 		});
+        Button altro2=(Button)rootView.findViewById(R.id.btn_addCatus);
+        altro2.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			Intent altro=new Intent(rootView.getContext(),CategoriaUscita.class);
+			startActivity(altro);
+			}
+		});
+        
+        Button listaCatEn = (Button)rootView.findViewById(R.id.btn_Caten);
+        Button listaCatUs = (Button)rootView.findViewById(R.id.btn_Catus);
+        listaCatUs.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			startActivity(new Intent(rootView.getContext(),CategoriaUS.class));	
+			}
+		});
         return rootView;
     }
 }

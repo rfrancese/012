@@ -9,6 +9,7 @@ import com.expenseManager.gestionespese.R.layout;
 import com.expenseManager.gestionespese.R.menu;
 import com.expenseManager.gestionespese.Utility.Calendario;
 
+import Account.Categoria;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -16,17 +17,20 @@ import android.app.AlertDialog.Builder;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Point;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
@@ -34,21 +38,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class AggiungiEntrata extends Activity {
+	DbAdapter dbHelper;
+	int a=0;
+	popupCateEn cat;
+	Categoria categ=new Categoria();
+	Context context=this;
+	RelativeLayout layout;
+	LayoutInflater inflate1;
+	View child1;
+	PopupWindow popup1,popup;
+	Cursor cursor1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_aggiungi_entrata);
+		Log.v("A=",""+a);
 		ImageButton categoria=(ImageButton)findViewById(R.id.addCatEn);
 		ImageButton conto=(ImageButton)findViewById(R.id.select_conto);
-		final Context context=this;
 		Display display=getWindowManager().getDefaultDisplay();
 		Point size=new Point();
 		display.getSize(size);
 		int width=size.x;
 		int height=size.y;
 		final TextView text=(TextView)this.findViewById(R.id.selconto);
-		 DbAdapter dbHelper; 
+		  
 		 Cursor cursor;
 		dbHelper = new DbAdapter(this);
         dbHelper.open();
@@ -73,44 +88,38 @@ public class AggiungiEntrata extends Activity {
 	        	float importo_att=Float.parseFloat(cursor.getString(cursor.getColumnIndex(DbAdapter.KEY_CONTOIM_AT)));
 	        	conticino.add(new Account.Conto(id,nome,tipo,importo,importo_att));
 	        }
-	        final PopupWindow popup=new PopupWindow(child,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+	        popup=new PopupWindow(child,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 	        final Account.Conto conto_scelto = null;
 	        final Account.Conto conto_scelto1=new Account.Conto();
 	        final popupConto ll=new popupConto(conticino, scroll, child.getContext(),child,below,text,popup,conto_scelto);
 	        
 	        popup.setHeight(height-100);
  		popup.setWidth(width-100);
+ 		
 	        stopManagingCursor(cursor);
 	        cursor.close();
-	       LayoutInflater inflate1=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	       /*LayoutInflater inflate1=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View child1=inflate1.inflate(R.layout.activity_categoria, null);
 			 DbAdapter dbHelper1; 
 			 Cursor cursor1;
 			dbHelper1 = new DbAdapter(this);
 	        dbHelper1.open();
-	        cursor1=dbHelper.fetchAllCatEn();
-	        startManagingCursor(cursor1);
-	        ArrayList<Account.Categoria> categorie=new ArrayList<Account.Categoria>();
+	        cursor1=dbHelper.fetchAllCatEn();*/
 	        
-	        RelativeLayout layout=(RelativeLayout)child1.findViewById(R.id.Categorie);
-	        Log.v("layout",layout.toString());
-	        while(cursor1.moveToNext())
-	        {
-	          	int id=Integer.parseInt(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_CATID)));
-	            String nome=cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_CATNOME));
-	            int color=Integer.parseInt(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_COLORID)));
-	            int icon=Integer.parseInt(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_ICONID)));
-	            
-	            categorie.add(new Account.Categoria(id, icon, color, nome, null));
-	        }
-	    		cursor1.close();
+	       /* ArrayList<Account.Categoria> categorie=new ArrayList<Account.Categoria>();
+	        
+	        layout=(RelativeLayout)child1.findViewById(R.id.Categorie);
+	        
 	    		TextView text1=(TextView)findViewById(R.id.cate_addentrata);
-	    		final PopupWindow popup1=new PopupWindow(child1,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-	    		
+	    		popup1=new PopupWindow(child1,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 	    		popup1.setHeight(height-100);
 	    		popup1.setWidth(width-100);
-		        popupCateEn cat=new popupCateEn(categorie, layout, child1.getContext(),child1,below,text1,popup1);
-		categoria.setOnClickListener(new View.OnClickListener() {
+	    		Categoria categ=new Categoria();
+		        cat=new popupCateEn(cursor1, layout, child1.getContext(),child1,below,text1,popup1,categ,this);*/
+	        inflate1=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			child1=inflate1.inflate(R.layout.activity_categoria, null);
+			popup1=new PopupWindow(child1,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+	        categoria.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -133,14 +142,17 @@ public class AggiungiEntrata extends Activity {
 					popup.showAtLocation(v, Gravity.CENTER, 0, 0);
 				}
 				else
-				popup.dismiss();
+				{
+					popup.dismiss();
+				}
 				Log.v("Is Open",""+popup.isShowing());
 				
 			}
 		});
+		
 		final Calendar data=Calendar.getInstance();
 		TextView var=(TextView)findViewById(R.id.textData_addentrata);
-		Calendario calendario=new Calendario(var,data.get(Calendar.MONTH),data.get(Calendar.YEAR),data.get(Calendar.DAY_OF_MONTH));
+		final Calendario calendario=new Calendario(var,data.get(Calendar.MONTH),data.get(Calendar.YEAR),data.get(Calendar.DAY_OF_MONTH));
 		ImageButton setData=(ImageButton)findViewById(R.id.entrata_data);
 		setData.setOnClickListener(new View.OnClickListener() {
 			
@@ -155,7 +167,7 @@ public class AggiungiEntrata extends Activity {
 						// TODO Auto-generated method stub
 					DatePicker data=setData.getDatePicker();
 					TextView txt_data=(TextView)findViewById(R.id.textData_addentrata);	
-				    Calendario calendario=new Calendario(txt_data,data.getMonth(),data.getYear(),data.getDayOfMonth());
+				    calendario.updateData(txt_data,data.getMonth(),data.getYear(),data.getDayOfMonth());
 					}
 				});
 			    setData.setButton(DialogInterface.BUTTON_NEGATIVE,"Annulla", new DialogInterface.OnClickListener() {
@@ -176,26 +188,38 @@ public class AggiungiEntrata extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				
-			if(!text.getText().toString().equalsIgnoreCase(getResources().getString(R.string.sel_conto_default)))
+				EditText value=(EditText)findViewById(R.id.importo);
+			if(!value.getText().toString().equalsIgnoreCase(""))
+			{
+				if(!text.getText().toString().equalsIgnoreCase(getResources().getString(R.string.sel_conto_default)))
 			{
 				conto_scelto1.clone(ll.getConto());
 				DbAdapter dbHelper = new DbAdapter(context);
 		        dbHelper.open();
-				float importo=100;
-			int categoria=1;
-			String data="05/12/2010";
-			String nota="ciao";
-			String descrizione="forse";
-			dbHelper.createEntrata(importo, data, descrizione, categoria, conto_scelto1.getId());
+		        
+				float importo=Float.parseFloat(value.getText().toString());
+			int categoria=categ.getId();
+			String data=calendario.getData();
+			TextView description=(TextView)findViewById(R.id.descrizione);
+			TextView note=(TextView)findViewById(R.id.note);
+			String nota=note.getText().toString();
+			String descrizione=description.getText().toString();
+			dbHelper.createEntrata(importo, data, descrizione, categoria, conto_scelto1.getId(),nota,"Entrata");
 			dbHelper.addEntrata(conto_scelto1.getId(), importo);
+			Toast.makeText(context, "Entrata Aggiunta", Toast.LENGTH_SHORT).show();
+			String stringa="["+importo+"]["+categ.getNome()+"]["+data+"]["+descrizione+"]["+conto_scelto1.getNome()+"]["+nota+"]";
+			Toast.makeText(context, stringa, Toast.LENGTH_SHORT).show();
 			}
 			else
-				Toast.makeText(context, "Scegli un conto", Toast.LENGTH_SHORT).show();
+				{Toast.makeText(context, "Scegli il conto e/o la categoria", Toast.LENGTH_SHORT).show();
 				//conto_scelto1.clone(ll.getConto());
-				Log.v("Conto Scelto",conto_scelto1.toString());
+				Log.v("Conto Scelto",conto_scelto1.toString());}
 			}
-				
+			else
+			{
+				Toast.makeText(context, "Inserire un importo valido", Toast.LENGTH_SHORT).show();
+			}
+			}	
 		});
 	}
 
@@ -204,6 +228,95 @@ public class AggiungiEntrata extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.aggiungi_entrata, menu);
 		return true;
+	}
+	
+	@Override
+	public void onResume()
+	{
+		
+		
+		Log.v("popup1 prima di resume",""+popup1.isShowing());
+		super.onResume();
+		/*
+		final Context context=this;
+		Display display=getWindowManager().getDefaultDisplay();
+		Point size=new Point();
+		display.getSize(size);
+		int width=size.x;
+		int height=size.y;
+		DbAdapter dbAdapter=new DbAdapter(this);
+		dbAdapter.open();
+		LayoutInflater inflate1=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		View child1=inflate1.inflate(R.layout.activity_categoria, null);
+		Cursor cursor1=dbAdapter.fetchAllCatEn();
+		 RelativeLayout layout=(RelativeLayout)child1.findViewById(R.id.Categorie);
+	        
+ 		TextView text1=(TextView)findViewById(R.id.cate_addentrata);
+ 		final PopupWindow popup1=new PopupWindow(child1,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+ 		
+ 		popup1.setHeight(height-100);
+ 		popup1.setWidth(width-100);
+ 		Categoria categ=new Categoria();
+		final popupCateEn cat=new popupCateEn(cursor1, layout, child1.getContext(),child1,null,text1,popup1,categ,this);*/
+		dbHelper.open();
+		cursor1=dbHelper.fetchAllCatEn();
+		Display display=getWindowManager().getDefaultDisplay();
+		Point size=new Point();
+		display.getSize(size);
+		int width=size.x;
+		int height=size.y; 
+	
+		layout=(RelativeLayout)child1.findViewById(R.id.Categorie);
+	        
+ 		TextView text1=(TextView)findViewById(R.id.cate_addentrata);
+		popup1.setHeight(height-100);
+		popup1.setWidth(width-100);
+ 		cat=new popupCateEn(cursor1, layout, child1.getContext(),child1,null,text1,popup1,categ,this,"Entrata");
+		if(popup1.isShowing())
+		{
+        	layout.invalidate();
+        	cat=new popupCateEn(cursor1, layout, child1.getContext(),child1,null,text1,popup1,categ,this,"Entrata");
+        	popup1.dismiss();
+        	Log.v("popup1",""+popup1.isShowing());
+			popup1.showAtLocation(this.getCurrentFocus(), Gravity.CENTER, 0, 0);
+			Log.v("popup1",""+popup1.isShowing());
+		} 
+		Log.v("Is Open",""+popup1.isShowing());
+		
+	    // Remove the unique action so the next time onResume is called it will restart
+	   
+		Log.v("onresume","onresume");
+		
+ 		
+	       /* for(int i=0;i<cat.getArrayList().size();i++)
+			{
+				Log.v("onResume : I = "," "+i+" ArrayList : " +cat.getArrayList().get(i).getNome());
+			}*/
+	        
+			/*
+	        popup1.update();*/
+	
+		
+	}
+	
+	public void onPause()
+	{
+		super.onPause();
+
+		
+	}
+	
+	public boolean onKeyDown(int keyCode,KeyEvent event)
+	{
+		if((keyCode==KeyEvent.KEYCODE_BACK))
+		{
+			if(popup.isShowing()==true)
+			{ popup.dismiss(); return false;} 
+			else if(popup1.isShowing()==true)
+				{popup1.dismiss();return false;}
+			else if(popup1.isShowing()==false && popup.isShowing()==false);
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 
 }

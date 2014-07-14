@@ -9,6 +9,7 @@
     android:background="@color/blue"
     android:padding="0px"
     tools:context=".AggiungiEntrata" >
+    
     <LinearLayout 
         android:id="@+id/intesta_addentrata"
         android:layout_width="match_parent"
@@ -25,6 +26,7 @@
             android:textSize="8pt"
             />
     </LinearLayout>
+    
     <LinearLayout
         android:id="@+id/btn_addentrata"
         android:layout_width="match_parent"
@@ -35,7 +37,8 @@
 
         <Button
             android:id="@+id/btn_annulla"
-            android:layout_width="190dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:background="@color/entrata"
             android:text="@string/annulla"
@@ -50,7 +53,8 @@
 
         <Button
             android:id="@+id/btn_salva"
-            android:layout_width="190dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="@color/entrata"
@@ -58,12 +62,19 @@
             android:textColor="@color/white" />
 
     </LinearLayout>
-    
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_addentrata">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/entrata"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btn_addentrata"
+        
         android:orientation="vertical"
         >
     <LinearLayout 
@@ -102,6 +113,7 @@
     <TextView
         android:id="@+id/labCat_addentrata"
         android:layout_width="99dp"
+        android:layout_weight="1"
         android:layout_height="match_parent"
         android:text="@string/categoria"
         android:textColor="@color/white"
@@ -112,6 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingLeft="30dp"
+        android:layout_weight="1"
         android:text="@string/cat_default"
         android:textColor="@color/white"
         android:textSize="8pt" />
@@ -121,7 +134,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/blue"
-        android:paddingLeft="40dp"
+        
+        android:layout_weight="1"
         android:src="@android:drawable/ic_menu_edit"
         tools:ignore="ContentDescription" />
 
@@ -129,16 +143,17 @@
 
      <LinearLayout
          android:id="@+id/ben_addentrata"
-         android:layout_width="wrap_content"
+         android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_marginTop="5dp"
           >
 
     <TextView
         android:id="@+id/labBen_addentrata"
-        android:layout_width="wrap_content"
+        android:layout_width="99dp"
         android:layout_height="wrap_content"
         android:text="@string/debitore"
+        android:layout_weight="1"
         android:textColor="@color/white"
         android:textSize="8pt" />
 
@@ -149,9 +164,10 @@
 
     <EditText
         android:id="@+id/descrizione"
-        android:layout_width="246dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
+        android:layout_weight="4"
         android:textColor="@color/white"
         android:textSize="8pt" >
 
@@ -162,7 +178,7 @@
 
      <LinearLayout
          android:id="@+id/data_addentrata"
-         android:layout_width="wrap_content"
+         android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_marginTop="5dp" >
 
@@ -171,6 +187,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/data1"
+        android:layout_weight="1"
         android:textColor="@color/white"
         android:textSize="8pt" />
 
@@ -179,6 +196,7 @@
         android:layout_width="189dp"
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
+        android:layout_weight="1"
         android:text="@string/data"
         android:textColor="@color/white"
         android:textSize="8pt" />
@@ -188,7 +206,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/blue"
-        android:paddingLeft="40dp"
+        android:layout_weight="1"
         android:src="@android:drawable/ic_menu_edit"
         tools:ignore="ContentDescription" />
 
@@ -196,7 +214,7 @@
 
      <LinearLayout
          android:id="@+id/selConto_addentrata"
-         android:layout_width="wrap_content"
+         android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_marginTop="5dp"
           >
@@ -206,6 +224,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/sel_conto"
+        android:layout_weight="1"
         android:textColor="@color/white"
         android:textSize="8pt" />
 
@@ -214,6 +233,7 @@
         android:layout_width="189dp"
         android:layout_height="match_parent"
         android:textColor="@color/white"
+        android:layout_weight="1"
         android:textSize="8pt"
         android:paddingLeft="30dp"
         android:text="@string/sel_conto_default" />
@@ -223,7 +243,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/blue"
-        android:paddingLeft="40dp"
+        android:layout_weight="1"
         android:src="@android:drawable/ic_menu_edit"
         tools:ignore="ContentDescription" />
 
@@ -242,6 +262,7 @@
              android:layout_width="100dp"
              android:layout_height="wrap_content"
              android:text="@string/note"
+             android:layout_weight="1"
              android:textColor="@color/white"
              android:textSize="8pt" />
 
@@ -251,6 +272,7 @@
              android:layout_height="match_parent"
              android:ems="10"
              android:inputType="text"
+             android:layout_weight="1"
              android:paddingLeft="15dp"
              android:layout_marginLeft="10dp"
              android:text="@string/opt"
@@ -261,11 +283,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/blue"
-        android:paddingLeft="40dp"
+		android:layout_weight="1"
         android:src="@android:drawable/ic_menu_edit"
         tools:ignore="ContentDescription" />
 
     </LinearLayout>
     </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
 

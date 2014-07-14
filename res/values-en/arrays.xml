@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ordina"> <!-- il campo name l'ho lasciato uguale non l'ho tradotto..si deve fare la traduzione anke di questo??-->
+		 <item> Order </item> 
+         <item> Descending </item> 
+         <item> Ascending </item>
+	</string-array>
+    
+	<string-array name="conto">
+		 <item> Select Account </item> 
+         <item> new account </item>
+	</string-array> 
+    <string-array name="nav_drawer_items">
+			 <item> Home </item> 
+             <item> Expense Management </item> 
+             <item> Management Entrance </item> 
+             <item> Account Management </item> 
+             <item> Overview </item> 
+             <item> Report </item> 
+             <item>Other </item> 
+             <item> Settings </item>
+	 </string-array>
+	 
+	 
+	 <array name="nav_drawer_icons">
+            <item>@drawable/caticon2</item>
+            <item>@drawable/caticon15</item>
+            <item>@drawable/caticon53</item>
+            <item>@drawable/icon_bank</item>
+            <item>@drawable/partita_doppia</item>
+            <item>@drawable/caticon21</item>
+            <item>@drawable/caticon33</item>
+            <item>@drawable/caticon23</item>
+        </array>
+        <array name="mese">
+			 <item> January </item> 
+             <item> February </item> 
+             <item> March </item> 
+             <item> April </item> 
+             <item> May </item> 
+             <item> June </item> 
+             <item> July </item> 
+             <item> August </item> 
+             <item> September </item> 
+             <item> October </item> 
+             <item> November </item> 
+             <item> December </item>
+		</array>
+		<!--VANNO BENE SCRITTI QUI I COLORI?..-->
+	<color name="bright_pink">#FF007F</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="violet">#7F00FF</color>
+    <color name="magenta">#FF00FF</color>
+
+	
+    <array name="rainbow">
+        <item>@color/bright_pink</item>
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/yellow</item>
+        <item>@color/chartreuse</item>
+        <item>@color/green</item>
+        <item>@color/spring_green</item>
+        <item>@color/cyan</item>
+        <item>@color/azure</item>
+        <item>@color/blue</item>
+        <item>@color/violet</item>
+        <item>@color/magenta</item>
+    </array>
+</resources>

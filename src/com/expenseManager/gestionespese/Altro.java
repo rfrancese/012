@@ -70,7 +70,7 @@ public class Altro extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_altro);
-        /*Button altro=(Button)findViewById(R.id.btn_addCaten);
+       /* Button altro=(Button)findViewById(R.id.btn_addCaten);
         altro.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -90,7 +90,7 @@ public class Altro extends Activity
               startActivity(altro);
 			}
 		});*/
-        
+       
       mTitle = mDrawerTitle = getTitle();
         
         // load slide menu items

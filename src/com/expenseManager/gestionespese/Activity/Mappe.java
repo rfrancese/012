@@ -7,6 +7,7 @@ import java.util.List;
 import com.expenseManager.gestionespese.R;
 import com.expenseManager.gestionespese.R.layout;
 import com.expenseManager.gestionespese.R.menu;
+import com.expenseManager.gestionespese.Database.DbAdapter;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -18,11 +19,13 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import Account.Categoria;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.Dialog;
+import android.database.Cursor;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -35,6 +38,10 @@ public class Mappe extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mappe);
 		Log.v("Cerco","...");
+		DbAdapter dbHelper=new DbAdapter(this);
+		dbHelper.open();
+		Cursor cursor1=dbHelper.fetchOpUscitaWithMap();
+		
 		int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getBaseContext());
 
         if(status!=ConnectionResult.SUCCESS){
@@ -45,9 +52,32 @@ public class Mappe extends FragmentActivity {
 		GoogleMap map=((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
 		Log.v("map",map.toString());
 		ArrayList<LatLng> latlng=new ArrayList<LatLng>();
-		latlng.add(new LatLng(40.611,14.989));
-		latlng.add(new LatLng(40.605,14.995));
-		latlng.add(new LatLng(40.600970,14.978505));
+		ArrayList<Account.Categoria> categoria=new ArrayList<Account.Categoria>();
+		ArrayList<Account.Spesa> spesa=new ArrayList<Account.Spesa>();
+		while(cursor1.moveToNext())
+		{
+			 int id=Integer.parseInt(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_USCITAID)));
+			 float importo=Float.parseFloat(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_USCITAIM)));
+	         String data=cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_USCITADATA));
+	         String descrizione=cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_USCITADESC));
+	         int categoria_id=Integer.parseInt(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_USCITACAT)));
+			 int conto_id=Integer.parseInt(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_USCITACON)));
+			 double lat=Double.parseDouble(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_USCITALAT)));
+			 double lng=Double.parseDouble(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_USCITALON)));
+			 String city=cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_USCITACIT));
+			 latlng.add(new LatLng(lat,lng));
+			 spesa.add(new Account.Spesa(id, importo, data, descrizione, categoria_id, conto_id, 0, lat, lng, city));
+			 Log.v("Map of Spesa[ "+id+" ][ "+importo+" ][ "+data+" ][ "+descrizione+" ][ "+categoria_id+" ][ "+conto_id+" ][ "+lat+" "+lng +" "+city+" ]",""+map);
+		}
+		cursor1.close();
+		cursor1=dbHelper.fetchAllCatUs();
+		while(cursor1.moveToNext())
+		{
+		int id=Integer.parseInt(cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_CATID)));
+		String nome=cursor1.getString(cursor1.getColumnIndex(DbAdapter.KEY_CATNOME));
+		categoria.add(new Account.Categoria(id,0,0,nome,null));	
+		}
+		cursor1.close();
 		map.setMyLocationEnabled(true);
 		
 		 Geocoder geocoder; 
@@ -57,7 +87,8 @@ public class Mappe extends FragmentActivity {
 		
 		for(int i=0;i<latlng.size();i++)
 		{
-			
+		Log.v("latlng size",""+latlng.size());
+		Log.v("Ciclo di i",""+i);
 			
 			if (latlng.get(i).latitude != 0 || latlng.get(i).longitude != 0) 
 			{ try {
@@ -74,20 +105,18 @@ public class Mappe extends FragmentActivity {
 			} else 
 			{ Toast.makeText(this, "latitude and longitude are null",
 					Toast.LENGTH_LONG).show();}
-			BitmapDescriptor btmp_benz=BitmapDescriptorFactory.fromResource(R.drawable.caticon10);
-			BitmapDescriptor btmp_svago=BitmapDescriptorFactory.fromResource(R.drawable.caticon37);
-			BitmapDescriptor btmp_spesa=BitmapDescriptorFactory.fromResource(R.drawable.caticon15);
-			switch(i)
-			{
 			
-			case 0:map.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng.get(i), 13));
-			map.addMarker(new MarkerOptions().title(""+city+" "+address).snippet("Alimentari - Conad €24.00").position(latlng.get(i)));break;
-			case 1:map.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng.get(i), 13));
-			map.addMarker(new MarkerOptions().title(""+city+" "+address).snippet("Trasporti - Benzina €10.00").position(latlng.get(i)));break;
-			case 2:map.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng.get(i), 13));
-			map.addMarker(new MarkerOptions().title(""+city+" "+address).snippet("Divertimento - Stadio €5").position(latlng.get(i)));break;
-			case 3:map.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng.get(i), 13));break;
+			map.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng.get(i), 13));
+			Categoria categoriascelta=null;
+			for(int j=0;j<categoria.size();j++)
+			{
+				if(categoria.get(j).getId()==spesa.get(i).getCategoria())
+				{
+					categoriascelta=categoria.get(j);
+				}
 			}
+			map.addMarker(new MarkerOptions().title(""+city+" "+address).snippet(categoriascelta.getNome()+" - "+spesa.get(i).descrizione+" :€ " +spesa.get(i).getImporto()).position(latlng.get(i)));
+			
 		}
         }
          

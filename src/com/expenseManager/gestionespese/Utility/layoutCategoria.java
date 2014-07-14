@@ -3,6 +3,7 @@ package com.expenseManager.gestionespese.Utility;
 import com.expenseManager.gestionespese.R;
 import com.expenseManager.gestionespese.Activity.CategoriaEntrata;
 
+import Account.Categoria;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -22,7 +23,7 @@ import android.widget.Toast;
 public class layoutCategoria {
     private View context;
     private ExpandableListView opt;
-	public layoutCategoria(final View context,final ImageView image, ExpandableListView opt1)
+	public layoutCategoria(final View context,final ImageView image, ExpandableListView opt1,final Categoria categoria)
 	{
 		this.context=context;
 		this.opt=(ExpandableListView)opt1;
@@ -46,10 +47,10 @@ public class layoutCategoria {
 			for(int j=0;j<3;j++)
 			{
 				ImageButton icon=new ImageButton(context.getContext());
-				LinearLayout.LayoutParams parameter=new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+				LinearLayout.LayoutParams parameter=new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT,1);
 				icon.setLayoutParams(parameter);
 				//icon.setPadding(105, 10, 105, 10);
-				parameter.setMargins(85, 10, 85, 10);
+				parameter.setMargins(80, 10, 80, 10);
 				final String res="caticon"+p;
 				Log.v("Resource",res);
 				p+=1;
@@ -64,6 +65,7 @@ public class layoutCategoria {
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
 						int id=context.getResources().getIdentifier(res, "drawable", "com.expenseManager.gestionespese");
+						categoria.setId(id);
 						Log.v("ID",""+id);
 						image.setImageResource(context.getResources().getIdentifier(res, "drawable", "com.expenseManager.gestionespese"));
 						opt.collapseGroup(0);

@@ -21,6 +21,23 @@ public class Categoria {
 	this.tipo=tipo;
 	}
 	
+	public Categoria(int id,String nome,int color,int icon)
+	{
+		this.id=id;
+		this.nome=nome;
+		this.color=color;
+		this.icon=icon;
+	}
+	
+	public Categoria()
+	{
+		this.id=0;
+		this.icon=0;	
+		this.color=0;
+		this.nome=null;
+		this.tipo=null;
+	}
+	
 	public String getNome()
 	{
 	 return nome;	
@@ -33,7 +50,7 @@ public class Categoria {
 	
 	public String toString()
 	{
-		return "id: "+id+" icon: "+icon+" Nome: "+nome+" Tipo: "+tipo;
+		return "id: "+id+" icon: "+icon+" Nome: "+nome+" Color: "+color;
 		
 	}
 	
@@ -55,4 +72,35 @@ public class Categoria {
 		// TODO Auto-generated method stub
 		return id;
 	}
+	
+	public void clona(Categoria cat)
+	{
+		this.id=cat.id;
+		this.icon=cat.icon;	
+		this.color=cat.color;
+		this.nome=cat.nome;
+		this.tipo=cat.tipo;
+	}
+
+	public void setNome(String string) {
+		// TODO Auto-generated method stub
+	  this.nome=string;
+	}
+
+	public void setId(int id2) {
+		// TODO Auto-generated method stub
+	 icon=id2;	
+	}
+	
+	public void setColor(int color)
+	{
+		this.color=color;
+	}
+	
+	public int getIcon()
+	{
+		return icon;
+	}
+
+
 }

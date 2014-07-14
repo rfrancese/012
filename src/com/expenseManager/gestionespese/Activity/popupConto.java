@@ -23,12 +23,14 @@ import android.widget.TextView;
 public class popupConto {
 
 	private View act;
-	private RelativeLayout below,rel;
+	private RelativeLayout below,rel,layout;
+	private int cont=0,p=0;
 	private Context context;
-	private TextView txt;
+	private TextView txt,nome_c;
 	private PopupWindow popup;
 	private ArrayList<Conto> conto;
-	private Account.Conto conto_scelto=null;
+	private Account.Conto conto_scelto=new Account.Conto(-1,"init","init",0,0);
+	Account.Conto conticino=new Account.Conto();
 	
 	public popupConto(ArrayList<Conto> conto,RelativeLayout rel,Context context,View act,RelativeLayout below, TextView txt,final PopupWindow popup,Conto conto_scelto1)
 	{
@@ -47,16 +49,17 @@ public class popupConto {
 	public void populaConto(final Conto conto_scelto1)
 	{
 boolean flag=false;
-        int cont=0;
+        
         for(cont=0;cont<conto.size();cont++)
         {
         	Log.v("Below_ID",""+below.getId());
-        	if(flag==true)
+        	Log.v("Cont",""+cont);
+        	if(cont>0)
         	{
-    	RelativeLayout layout=new RelativeLayout(context);
+    	layout=new RelativeLayout(context);
     	layout.setId(cont);
     	ImageView checkbox=new ImageView(context);
-    	final TextView nome_c=new TextView(context);
+    	nome_c=new TextView(context);
     	TextView saldo_c=new TextView(context);
     	TextView saldo1_c=new TextView(context);
     	ImageButton image=new ImageButton(context);
@@ -93,28 +96,35 @@ boolean flag=false;
     	nome_c.setTextSize(TypedValue.COMPLEX_UNIT_PT,8);
     	nome_c.setText(conto.get(cont).getNome());
     	nome_c.setLayoutParams(nome);
-   
+        final Account.Conto conticino=conto.get(cont);
     	layout.addView(checkbox,check);
     	layout.addView(nome_c);
-    	final int p=cont;
+    	p=cont;
+    	Log.v("Conto ["+cont+"]",""+conto.get(cont).getNome());
+    	
     	layout.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				Log.v("P",""+p);
 				// TODO Auto-generated method stub
 				txt.setText(nome_c.getText().toString());
 				popup.dismiss();
-				conto_scelto=conto.get(p);
-				conto_scelto1.clone(conto_scelto);
+				
+				conto_scelto.clone(conticino);
+				Log.v("Conto layout",""+conto_scelto.getId());
 			}
 		});
+    		
     	}
     	else
     	{
         final TextView nome=(TextView)act.findViewById(R.id.name_cont);
-    	final int p=cont;
-    	nome.setText(conto.get(cont).getNome());
-        flag=true;
+    	p=cont;
+    	nome.setText(conto.get(p).getNome());
+        Log.v("Conto ["+cont+"]",""+conto.get(p).getNome());
+        conticino.clone(conto.get(p));
+    	flag=true;
         Log.v("Below id",""+below.getId());
         below.setOnClickListener(new View.OnClickListener() {
 			
@@ -122,13 +132,15 @@ boolean flag=false;
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Log.v("P",""+p);
-				Log.v("Conto",conto.get(p).toString());
+				
 				txt.setText(nome.getText().toString());
 				popup.dismiss();	
-				conto_scelto=conto.get(p);
-				conto_scelto1.clone(conto.get(p));
+				conto_scelto.clone(conticino);
+				conto_scelto1.clone(conto_scelto);
+				Log.v("Conto below",""+conto_scelto.getId());
 			}
 		});
+        	
         
     	}
         }

@@ -9,6 +9,12 @@
         <item>Seleziona Conto</item>
         <item> new conto</item>
     </string-array> 
+    <string-array name="report">
+        <item>Giornaliero</item>
+        <item>Settimanale</item>
+        <item>Mensile</item>
+        <item>Annuale</item>
+    </string-array>
     <string-array name="nav_drawer_items">
             <item>Home</item>
             <item>Gestione Spesa</item>
@@ -31,5 +37,19 @@
             <item>@drawable/caticon21</item>
             <item>@drawable/caticon33</item>
             <item>@drawable/caticon23</item>
+        </array>
+        <array name="mese">
+            <item>Gennaio</item>
+            <item>Febbraio</item>
+            <item>Marzo</item>
+            <item>Aprile</item>
+            <item>Maggio</item>
+            <item>Giugno</item>
+            <item>Luglio</item>
+            <item>Agosto</item>
+            <item>Settembre</item>
+            <item>Ottobre</item>
+            <item>Novembre</item>
+            <item>Dicembre</item>
         </array>
 </resources>

@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.expenseManager.gestionespese.PartitaDoppia"
+    android:background="@color/blue"
+    tools:ignore="MergeRootFrame" >
+<TextView
+    android:id="@+id/intestReport"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/report"
+    
+    android:text="Report Partita Doppia"
+    android:textColor="@color/white" />
+
+<TableRow
+    android:id="@+id/intestTable"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:layout_below="@+id/intestReport" >
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="108px"
+        android:layout_height="match_parent"
+        android:textSize="5pt"
+        android:background="@color/report"
+        android:text="Data"
+        android:gravity="center"
+        android:textColor="@color/white" />
+ 
+ <TextView
+     android:id="@+id/categoria"
+    android:layout_width="108px"
+    android:layout_height="match_parent"
+    android:background="@color/report"
+    android:textSize="5pt"
+     android:layout_marginLeft="3dp"
+    android:text="Categoria"
+    android:gravity="center"
+    android:textColor="@color/white" />
+ <TextView
+     android:id="@+id/descrizione"
+    android:layout_width="144px"
+    android:layout_height="match_parent"
+    android:background="@color/report"
+    android:textSize="5pt"
+     android:layout_marginLeft="3dp"
+    android:text="Descrizione"
+    android:gravity="center"
+    android:textColor="@color/white" />  
+    <TextView
+        android:id="@+id/conto"
+    android:layout_width="108px"
+    android:layout_height="match_parent"
+    android:background="@color/report"
+    android:textSize="5pt"
+    android:gravity="center"
+     android:layout_marginLeft="3dp"
+    android:text="Conto"
+    android:textColor="@color/white" /> 
+    <TextView
+        android:id="@+id/entrata"
+    android:layout_width="108px"
+    android:layout_height="match_parent"
+    android:background="@color/report"
+    android:textSize="5pt"
+    android:gravity="center"
+     android:layout_marginLeft="3dp"
+    android:text="Entrata"
+    android:textColor="@color/white" />  
+    <TextView
+        android:id="@+id/uscita"
+    android:layout_width="108px"
+    android:layout_height="match_parent"
+    android:background="@color/report"
+    android:textSize="5pt"
+    android:gravity="center"
+     android:layout_marginLeft="3dp"
+    android:text="Uscita"
+    android:textColor="@color/white" />
+</TableRow>
+
+<ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/intestTable"
+    android:scrollbars="vertical">
+<TableLayout
+    android:id="@+id/intestTabella"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    
+    android:layout_marginTop="10dp"
+    android:background="@color/blue"
+    android:orientation="horizontal"
+    >
+
+ 
+</TableLayout>
+</ScrollView>
+
+</RelativeLayout>

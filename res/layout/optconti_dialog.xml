@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+<RadioButton 
+    android:id="@+id/modifica_conto"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Modifica Conto"
+    />
+
+<RadioButton
+    android:id="@+id/trasferimento_conto"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Trasferisci da/a Conto"
+    />
+<RadioButton 
+    android:id="@+id/elimina_conto"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Elimina Conto"
+    />
+</RadioGroup>
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <Button
+        android:id="@+id/esegui"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Esegui"
+         />
+    <Button 
+        android:id="@+id/annulla"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Annulla"
+        />
+</LinearLayout>
+</LinearLayout>

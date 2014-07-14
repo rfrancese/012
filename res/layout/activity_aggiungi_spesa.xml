@@ -35,10 +35,11 @@
 
         <Button
             android:id="@+id/btn_annulla"
-            android:layout_width="190dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/spesa"
             android:text="@string/annulla"
+            android:layout_weight="1"
             android:textColor="@color/white"
              />
 
@@ -50,7 +51,8 @@
 
         <Button
             android:id="@+id/btn_salva"
-            android:layout_width="190dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:background="@color/spesa"
             android:paddingLeft="10dp"
@@ -59,13 +61,16 @@
             android:layout_gravity="right" />
 
     </LinearLayout>
-    
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_addspesa">
     <LinearLayout
         android:id="@+id/spesa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/btn_addspesa"
         android:orientation="vertical"
+        android:layout_marginBottom="5dp"
         >
     <LinearLayout 
         android:id="@+id/number_addspesa"
@@ -85,6 +90,7 @@
             />
 
         <EditText
+            android:id="@+id/importo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -96,12 +102,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="10dp"
+        android:layout_marginTop="5dp"
         >
 
     <TextView
-        android:id="@+id/labCat_addspesa"
+        android:id="@+id/labCat_addSpesa"
         android:layout_width="99dp"
+        android:layout_weight="1"
         android:layout_height="match_parent"
         android:text="@string/categoria"
         android:textColor="@color/white"
@@ -109,9 +116,10 @@
 
     <TextView
         android:id="@+id/cate_addspesa1"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingLeft="30dp"
+        android:layout_weight="1"
         android:text="@string/cat_default"
         android:textColor="@color/white"
         android:textSize="8pt" />
@@ -121,14 +129,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/blue"
+        
+        android:layout_weight="1"
         android:src="@android:drawable/ic_menu_edit"
-        android:paddingLeft="35dp" android:contentDescription="TODO"/>
+        tools:ignore="ContentDescription" />
 
     </LinearLayout>
 
      <LinearLayout
          android:id="@+id/ben_addspesa"
-         android:layout_width="wrap_content"
+         android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:paddingBottom="10dp" >
 
@@ -138,6 +148,7 @@
         android:layout_height="wrap_content"
         android:text="@string/creditore"
         android:textColor="@color/white"
+        android:layout_weight="1"
         android:textSize="8pt" />
 
     <Space 
@@ -146,53 +157,61 @@
         />
 
     <EditText
-        android:layout_width="247dp"
+        android:id="@+id/descrizione"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
+        android:layout_weight="4"
         android:textColor="@color/white"
-        android:textSize="8pt" >
+        android:textSize="8pt"
+        
+         >
 
-        <requestFocus />
+        
     </EditText>
 
     </LinearLayout>
 
      <LinearLayout
          android:id="@+id/data_addspesa"
-         android:layout_width="wrap_content"
+         android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:paddingBottom="10dp" >
 
     <TextView
         android:id="@+id/labData_addspesa"
-        android:layout_width="99dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/data1"
+        android:layout_weight="1"
         android:textColor="@color/white"
         android:textSize="8pt" />
 
     <TextView
         android:id="@+id/textData_addspesa"
-        android:layout_width="189dp"
-        android:layout_height="wrap_content"
-        android:paddingLeft="30dp"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
         android:text="@string/data"
+        android:gravity="center"
+        android:layout_weight="1"
         android:textColor="@color/white"
         android:textSize="8pt" />
 
     <ImageButton
+        android:id="@+id/addData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/ic_menu_edit"
         android:background="@color/blue" 
-        android:paddingLeft="40dp" 
+        android:layout_weight="1"
+         
         />
 
     </LinearLayout>
 
      <LinearLayout
          android:id="@+id/selConto_addspesa"
-         android:layout_width="wrap_content"
+         android:layout_width="match_parent"
          android:layout_height="50dp"
          android:paddingBottom="10dp" >
 
@@ -201,29 +220,30 @@
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:gravity="center|left"
+        android:layout_weight="1"
         android:text="@string/sel_conto"
         android:textColor="@color/white"
         android:textSize="8pt" />
 
     <TextView
         android:id="@+id/sel_txtconti"
-        android:layout_width="200dp"
+        android:layout_width="176dp"
+        android:layout_weight="1"
         android:layout_height="match_parent"
-        android:textColor="@color/white"
         android:gravity="center"
-        
-        android:textSize="8pt"
-        
-        android:text="@string/sel_conto_default" />
+        android:text="@string/sel_conto_default"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
 
     <ImageButton
         android:id="@+id/sel_conti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:src="@android:drawable/ic_menu_edit"
         android:background="@color/blue" 
         android:layout_gravity="center"
-        android:paddingLeft="25dp"  />
+          />
 
     </LinearLayout>
     <LinearLayout
@@ -241,37 +261,44 @@
              android:text="@string/note"
              android:textColor="@color/white"
              android:textSize="8pt" />
+         <Space 
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        />
 
     <EditText
-        android:id="@+id/note1"
+        android:id="@+id/note"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/white"
         android:textSize="8pt"
-        android:paddingLeft="30dp"
-        android:text="@string/opt" android:inputType="text"><requestFocus /></EditText>
+        
+        android:text="@string/opt" android:inputType="text"></EditText>
     </LinearLayout>
 
         <LinearLayout
             android:id="@+id/luogo_addspesa"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="150dp"
             android:orientation="horizontal"
-            android:paddingBottom="10dp" >
+            android:layout_marginBottom="10dp"
+             >
 
             <TextView
                 android:id="@+id/labLuogo_addspesa"
                 android:layout_width="99dp"
-                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
                 android:text="@string/luogo"
                 android:textColor="@color/white"
                 android:textSize="8pt" />
 
             <TextView
                 android:id="@+id/luogo"
-                android:layout_width="189dp"
+                android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:text="@string/luogo1"
+                android:layout_weight="1"
                 android:textColor="@color/white"
                 android:textSize="8pt" />
 
@@ -279,10 +306,12 @@
                 android:id="@+id/getPosizione"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@color/blue"
                 android:paddingLeft="35dp"
                 android:src="@android:drawable/ic_menu_edit" />
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
